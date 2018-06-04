@@ -1,4 +1,24 @@
 body{
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
     background: #8dc53e url("../img/clms_largest.png") no-repeat;
     background-size: cover;
+}
+input{
+    padding: 1em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #ccc;
+    background-color: aliceblue;
+}
+input:focus{
+    background: #183f53;
+    color: white;
+}
+input[type=submit]{
+    color: #ccc;
+
+    background: #183f53;
 }
