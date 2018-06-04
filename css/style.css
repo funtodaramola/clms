@@ -6,12 +6,15 @@ body{
     background-size: cover;
 }
 input{
-    padding: 1.5em;
+    display: inline-block;
     border: none;
-    border-radius: 4px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
     font-size: 1em;
     color: #ccc;
     background-color: aliceblue;
+    padding: 1.5em;
     margin: 4px 2px;
 }
 input:focus{
@@ -23,4 +26,11 @@ input[type=submit]{
     text-decoration: none;
     cursor: pointer;
     background: #183f53;
+}
+
+@media screen and (max-width: 550px) { 
+    input {
+        display: none;
+        /* add text that window size too small */
+    }
 }
