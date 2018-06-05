@@ -3,7 +3,7 @@ body{
     line-height: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    background: #8dc53e url("../img/clms_largest.png") no-repeat;
+    background: #1abc9c url("../img/clms_largest.png") no-repeat;
     background-size: cover;
 }
 input{
@@ -14,7 +14,7 @@ input{
     border-radius: 6px;
     font-size: 1em;
     color: #555555;
-    background-color: aliceblue;
+    background-color: ##e5e5e5;
     padding: 1.5em;
     margin: 4px 2px;
 }
