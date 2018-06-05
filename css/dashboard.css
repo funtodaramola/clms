@@ -8,6 +8,15 @@ header{
     height: 552px;
     background: url(../img/clms_blue.png) no-repeat right 0px;
 }
+.feedback{ /* work on this, prolly use javascript*/
+    display: none;
+    /* width: 100%;
+    display: block;
+    position: absolute;
+    padding: 20px 0 20px 0;
+    top: 512px;
+    background-color: #1abc9c; */
+}
 
 .container{
     max-width: 980px;
