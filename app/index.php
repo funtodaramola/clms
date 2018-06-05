@@ -13,7 +13,12 @@
             
         </header>
         <div class="feedback">
-            <span></span>
+            <span>
+                <?php 
+                    $username = $_POST["username"];
+                    echo "Logged in as {$username}";
+                ?>
+            </span>
         </div>
         <section>
             <div class="action">
