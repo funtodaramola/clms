@@ -1,5 +1,5 @@
 body{
-    color: #555555;
+    color: #e5e5e5;
     background-color: #e5e5e5;
     margin: 0;
     padding: 0;
@@ -13,20 +13,40 @@ header{
     max-width: 980px;
     margin: 0px auto 0px auto;
     position: relative;
-    background-color: #fff;
+    background-color: #e5e5e5;
 }
 /* style for button and image */
 .btn, img{
     width: 100%;
-    max-width: 250px;
+    max-width: 180px;
     height: auto;
     /* padding: 2em; */
     border: none;
     background-color: transparent;
+    display: block; /* center button*/
+    margin: auto;
+}
+.content{
+    width: 300px;
+    background-color: #555;
 }
 .action h2{
     font-size: 2em;
+    text-align: center;
 }
+section .action{
+    width: 33.33%;
+    float: left;
+    background-position: 0px 3px;
+}
+section .action .content{
+    padding: 27px 0px 27px 27px;
+}
+.clear-fix {
+    clear: both;
+    line-height: 1px;
+}
+
 footer {
     font-size: .85em;
     background-color: #64acc5;
