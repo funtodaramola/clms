@@ -26,13 +26,13 @@ header{
     display: block; /* center button*/
     margin: auto;
 }
-.content{
-    width: 300px;
-    background-color: #555;
-}
+
 .action h2{
     font-size: 2em;
     text-align: center;
+}
+section{
+    background-color: #555;
 }
 section .action{
     width: 33.33%;
@@ -40,6 +40,7 @@ section .action{
     background-position: 0px 3px;
 }
 section .action .content{
+    width: 300px;
     padding: 27px 0px 27px 27px;
 }
 .clear-fix {
@@ -50,5 +51,5 @@ section .action .content{
 footer {
     font-size: .85em;
     background-color: #64acc5;
-    padding: 10px 10px 10px 0px;
+    padding: 10px;
 }
