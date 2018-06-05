@@ -25,6 +25,7 @@ header{
     background-color: transparent;
     display: block; /* center button*/
     margin: auto;
+    cursor: pointer;
 }
 
 .action h2{

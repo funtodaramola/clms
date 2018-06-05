@@ -14,10 +14,11 @@ input{
     border-radius: 6px;
     font-size: 1em;
     color: #555555;
-    background-color: ##e5e5e5;
+    background-color: #e5e5e5;
     padding: 1.5em;
     margin: 4px 2px;
 }
+
 input:focus{
     background: #183f53;
     color: #ccc;
@@ -28,9 +29,18 @@ input[type=submit]{
     cursor: pointer;
     background: #183f53;
 }
+.signup{
+    font-size: 1em;
+    margin: 0 0 0 4px;
+}
+.signup a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #e5e5e5;
+}
 
-@media screen and (max-width: 550px) { 
-    input {
+@media screen and (max-width: 600px) { 
+    input, p{
         display: none;
         /* add text that window size too small */
     }
