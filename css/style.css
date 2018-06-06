@@ -29,15 +29,7 @@ input[type=submit]{
     cursor: pointer;
     background: #183f53;
 }
-.signup{
-    font-size: 1em;
-    margin: 0 0 0 4px;
-}
-.signup a{
-    text-decoration: none;
-    cursor: pointer;
-    color: #e5e5e5;
-}
+
 
 @media screen and (max-width: 600px) { 
     input, p{
