@@ -9,8 +9,14 @@
 </head>
 <body>
     <div class="container">
-        <header></header>
-
+        <header>
+            
+        </header>
+            <div class="feedback">
+                <span>
+                    <!-- feedback based on action performed -->
+                </span>
+            </div>
         <section>
             <div class="action">
                 <div class="content">
@@ -69,7 +75,17 @@
             <div class="clear-fix"></div>
         </section>
 
-        <footer>&copy; Caleb University || Library</footer>
+        <footer>
+            <span>&copy; Caleb University || Library</span>
+            <div class="logout">
+                <span>
+                    <?php 
+                        $username = $_POST["username"];
+                        echo "Logged in as {$username}";
+                    ?>
+                </span>
+            </div>
+        </footer>
 
     </div>
 </body>
