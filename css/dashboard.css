@@ -9,7 +9,7 @@ header{
     background: url(../img/clms_blue.png) no-repeat right 0px;
 }
 .feedback{ /* work on this, prolly use javascript*/
-    display: none;
+    /* display: none; */
     /* width: 100%;
     display: block;
     position: absolute;
@@ -17,6 +17,9 @@ header{
     top: 512px;
     background-color: #1abc9c; */
 }
+
+
+
 
 .container{
     max-width: 980px;
@@ -62,4 +65,11 @@ footer {
     font-size: .85em;
     background-color: #64acc5;
     padding: 10px;
+}
+.logout {
+    display: inline;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    padding: 1em 1em .8em 1em;
 }
