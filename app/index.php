@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +10,9 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            
-        </header>
-            <div class="feedback">
-                <span>
-                    <!-- feedback based on action performed -->
-                </span>
-            </div>
-        <section>
+        <?php include ('header.php')?>
+
+        <section class = "dashboard">
             <div class="action">
                 <div class="content">
                     <a href="books.php">
@@ -75,18 +70,7 @@
             <div class="clear-fix"></div>
         </section>
 
-        <footer>
-            <span>&copy; Caleb University || Library</span>
-            <div class="logout">
-                <span>
-                    <?php 
-                        $username = $_POST["username"];
-                        echo "Logged in as {$username}";
-                    ?>
-                </span>
-            </div>
-        </footer>
-
+        <?php include ('footer.php')?>
     </div>
 </body>
 </html>
