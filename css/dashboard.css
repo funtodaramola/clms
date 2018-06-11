@@ -3,6 +3,7 @@ body{
     background-color: #e5e5e5;
     margin: 0;
     padding: 0;
+    
 }
 header{
     height: 552px;
@@ -17,9 +18,6 @@ header{
     top: 512px;
     background-color: #1abc9c; */
 }
-
-
-
 
 .container{
     max-width: 980px;
@@ -44,15 +42,15 @@ header{
     font-size: 2em;
     text-align: center;
 }
-section{
+.dashboard, .books-section{
     background-color: #555;
 }
-section .action{
+.dashboard .action{
     width: 33.33%;
     float: left;
     background-position: 0px 3px;
 }
-section .action .content{
+.dashboard .action .content{
     width: 300px;
     padding: 27px 0px 27px 27px;
 }
@@ -72,4 +70,47 @@ footer {
     position: absolute;
     right: 0;
     padding: 1em 1em .8em 1em;
+}
+.new {
+    font-size: 1em;
+    margin: auto;
+}
+
+/* styling for books page below */
+
+/* style for add new book icon */
+.new-icon{
+    width: 6em;
+    background-color: transparent;
+    border: none;
+    margin: 1em;
+    outline: none;
+}
+.new-icon img{
+    width: 3em;
+    height: auto;
+    cursor: pointer;
+}
+/* style for search bar */
+.search-container {
+    float: right;
+}
+.books-top input[type=text] {
+    padding: 12px;
+    margin: 13px 0 1em 0;
+    font-size: 1em;
+    border: none;
+    outline: none;
+}
+
+.books-top .search-container button {
+    float: right;
+    margin: 1em 2em 0 0;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+}
+.books-top .search-container button img{
+    width: 3em;
+    height: auto;
 }

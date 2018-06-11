@@ -1,3 +1,5 @@
+// add php to validate login else redirect
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,24 @@
     <title>Library Books</title>
 </head>
 <body>
-    
+    <div class="container">
+        <?php include ('header.php')?>
+
+        <section class="books-section">
+
+            <div class="books-top">
+                <button onclick="document.getElementById('').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
+                <div class="search-container">
+                    <form action="#">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><img src="../img/search.png" alt="search"></button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <?php include ('footer.php')?>
+    </div>
 </body>
 </html>
