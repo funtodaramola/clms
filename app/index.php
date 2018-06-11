@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CLMS Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <title>CLMS Dashboard</title>
 </head>
 <body>
     <div class="container">
@@ -20,7 +20,7 @@
         <section>
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="books.php">
                         <button class="btn" id="book"><img src="../img/book.png" alt="Books"></button>
                     </a>
                     <h2>Books</h2>
