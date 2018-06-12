@@ -1,26 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CLMS Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <title>CLMS Dashboard</title>
 </head>
 <body>
     <div class="container">
-        <header>
-            
-        </header>
-            <div class="feedback">
-                <span>
-                    <!-- feedback based on action performed -->
-                </span>
-            </div>
-        <section>
+        <?php include ('header.php')?>
+
+        <section class = "dashboard">
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="books.php">
                         <button class="btn" id="book"><img src="../img/book.png" alt="Books"></button>
                     </a>
                     <h2>Books</h2>
@@ -75,18 +70,7 @@
             <div class="clear-fix"></div>
         </section>
 
-        <footer>
-            <span>&copy; Caleb University || Library</span>
-            <div class="logout">
-                <span>
-                    <?php 
-                        $username = $_POST["username"];
-                        echo "Logged in as {$username}";
-                    ?>
-                </span>
-            </div>
-        </footer>
-
+        <?php include ('footer.php')?>
     </div>
 </body>
 </html>
