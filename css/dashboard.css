@@ -99,7 +99,7 @@ footer {
     float: right;
 }
 .books-top{
-    border-bottom: 5px solid #1abc9c;
+    border-bottom: 3px solid #1abc9c;
 }
 .books-top input[type=text] {
     padding: 12px;
@@ -236,4 +236,12 @@ hr {
     .btns .submit {
         width: 100%;
     }
+}
+/* style for page title */
+.search-container p{
+    position: absolute;
+    left: 40%;
+    display: inline;
+    font-size: 1.4em;
+    font-weight: bold;
 }

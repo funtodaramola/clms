@@ -19,6 +19,7 @@
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
+                    <p>Books</p>
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit"><img src="../img/search.png" alt="search"></button>
                 </form>
@@ -68,9 +69,10 @@
                 </div>
             </form>
         </div>
-
+        <div class="main">
+            
+        </div>
         </section>
-
         <?php include ('footer.php')?>
     </div>
 </body>
