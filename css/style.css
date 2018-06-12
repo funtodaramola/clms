@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box
+}
+
 body{
     color: #183f53;
     line-height: 1.5em;
@@ -6,6 +10,7 @@ body{
     background: #1abc9c url("../img/clms_largest.png") no-repeat;
     background-size: cover;
 }
+
 /* style for username and password input login field */
 input{
     display: inline-block;
@@ -25,6 +30,7 @@ input:focus{
     color: #ddd;
     outline: none;
 }
+
 /* style for login submit button */
 input[type=submit]{
     color: #e5e5e5;
@@ -32,11 +38,13 @@ input[type=submit]{
     cursor: pointer;
     background: #183f53;
 }
+
 /* style for signup paragraph element */
 .signup {
     font-size: 1em;
     margin: 0 0 0 4px;
 }
+
 /* style for paragraph button element */
 .signup .btn {
     background-color: transparent;
@@ -45,9 +53,6 @@ input[type=submit]{
     cursor: pointer;
 }
 
-* {
-    box-sizing: border-box
-}
 /* Full-width SignUp input fields*/
 .signup-input{
     width: 100%;
@@ -55,9 +60,11 @@ input[type=submit]{
     margin: 5px 0 22px 0;
     display: inline-block;
 }
+
 .signup-input:focus{
     outline: none;
 }
+
 /* Set a style for modal box buttons */
 .btns button {
     background-color: #1abc9c;
@@ -69,19 +76,23 @@ input[type=submit]{
     width: 100%;
     opacity: 0.9;
 }
+
 .btns button:hover {
     opacity: 1;
 }
+
 /* Extra styles for the cancel button */
 .btns .cancelbtn {
     padding: 14px 20px;
     background-color: #f44336;
 }
+
 /* Float cancel and signup buttons and add an equal width */
 .btns .cancelbtn, .btns .signupbtn {
     float: left;
     width: 50%;
 }
+
 /* Add padding to container elements */
 .container {
     padding: 1em;
@@ -104,11 +115,11 @@ input[type=submit]{
     /* Enable scroll if needed */
     background-color: #555;
     padding-top: 50px;
-    
 }
+
 /* Modal Content/Box */
 .modal-content {
-    z-index: 1000;
+    z-index: 1;
     background-color: #64acc5;
     margin: 5% auto 15% auto;
     /* 5% from the top, 15% from the bottom and centered */
@@ -119,10 +130,12 @@ input[type=submit]{
     -webkit-border-radius: 6px;
     border-radius: 6px;
 }
+
 hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
 }
+
 /* The Close Button (x) */
 .close {
     position: absolute;
@@ -132,10 +145,12 @@ hr {
     font-weight: bold;
     color: #f1f1f1;
 }
+
 .close:hover, .close:focus {
     color: #f44336;
     cursor: pointer;
 }
+
 /* Clear floats */
 .btns::after {
     content: "";
