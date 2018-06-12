@@ -91,6 +91,7 @@ footer {
     height: auto;
     cursor: pointer;
 }
+
 /* style for search bar */
 .search-container {
     float: right;
@@ -102,7 +103,6 @@ footer {
     border: none;
     outline: none;
 }
-
 .books-top .search-container button {
     float: right;
     margin: 1em 2em 0 0;
