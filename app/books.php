@@ -16,7 +16,7 @@
         <section class="books-section">
 
         <div class="books-top">
-            <button onclick="document.getElementById('add-modal').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
+            <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
                     <input type="text" placeholder="Search..." name="search">
@@ -26,9 +26,9 @@
         </div>
 
         <!-- The Modal (contains add new book form) -->
-        <div id="add-modal" class="add-modal">
+        <div id="modal-form" class="modal-form">
             <!-- span to close the modal -->
-            <span onclick="document.getElementById('add-modal').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('modal-form').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
             
             <!-- try using js to add content of form -->
             <form class="modal-content" action="#">
@@ -36,15 +36,16 @@
                     <h1>Add Book</h1>
                     <hr>
                     <label for="title"><b>Title</b></label>
-                    <input type="text" placeholder="Title..." name="title" class="addnew-input" required>
+                    <input type="text" placeholder="Title..." name="title" class="input-field" required>
 
                     <label for="author"><b>Author</b></label>
-                    <input type="text" placeholder="Author's name..." name="author" class="addnew-input" required>
+                    <input type="text" placeholder="Author's name..." name="author" class="input-field" required>
 
                     <label for="publisher"><b>Publisher</b></label>
-                    <input type="text" placeholder="Publisher..." name="publisher" class="addnew-input" required>
+                    <input type="text" placeholder="Publisher..." name="publisher" class="input-field" required>
 
-                    <select>
+                    <label for="category"><b>Category</b></label>
+                    <select name="category">
                         <option value="000">Information/General Studies</option>
                         <option value="100">Philosophy/Psychology</option>
                         <option value="200">Religion</option>
@@ -58,11 +59,11 @@
                     </select>
                     
                     <label for="edition"><b>Edition</b></label>
-                    <input type="text" placeholder="Edition..." name="edition" class="addnew-input" required>
+                    <input type="text" placeholder="Edition..." name="edition" class="input-field" required>
 
                     <div class="btns">
-                        <button type="button" onclick="document.getElementById('add-modal').style.display='none'" class="cancelbtn">Cancel</button>
-                        <button type="submit" class="addbtn">Add</button>
+                        <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="submit">Add</button>
                     </div>
                 </div>
             </form>
