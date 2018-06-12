@@ -19,7 +19,7 @@
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
-                    <p>Books</p>
+                    <p>BOOKS</p>
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit"><img src="../img/search.png" alt="search"></button>
                 </form>
