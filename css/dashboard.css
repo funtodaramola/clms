@@ -9,6 +9,7 @@ body{
     font-size: 16px;
 }
 header{
+    top: 0;
     height: 552px;
     background: url(../img/clms_blue.png) no-repeat right 0px;
 }
@@ -26,7 +27,7 @@ header{
     max-width: 980px;
     margin: 0px auto 0px auto;
     position: relative;
-    background-color: #e5e5e5;
+    background-color: #555;
 }
 /* style for button and image */
 .btn, img{
@@ -45,9 +46,7 @@ header{
     font-size: 2em;
     text-align: center;
 }
-.dashboard, .books-section{
-    background-color: #555;
-}
+
 .dashboard .action{
     width: 33.33%;
     float: left;
@@ -98,6 +97,9 @@ footer {
 /* style for search bar */
 .search-container {
     float: right;
+}
+.books-top{
+    border-bottom: 5px solid #1abc9c;
 }
 .books-top input[type=text] {
     padding: 12px;
