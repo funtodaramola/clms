@@ -103,7 +103,6 @@ input[type=submit]{
     overflow: auto;
     /* Enable scroll if needed */
     background-color: #555;
-    opacity: 0.9;
     padding-top: 50px;
     
 }
