@@ -6,7 +6,7 @@ body{
     color: #183f53;
     line-height: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     background: #1abc9c url("../img/clms_largest.png") no-repeat;
     background-size: cover;
 }
@@ -41,7 +41,7 @@ input[type=submit]{
 
 /* style for signup paragraph element */
 .signup {
-    font-size: 1em;
+    font-size: .8em;
     margin: 0 0 0 4px;
 }
 
