@@ -35,7 +35,7 @@
 
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="students.php">
                         <button class="btn" id="student"><img src="../img/student.png" alt="Students"></button>
                     </a>
                     <h2>Students</h2>

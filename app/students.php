@@ -1,4 +1,3 @@
-// add php to validate login else redirect
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,18 +8,18 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/queryscript.js"></script>
-    <title>Library Books</title>
+    <title>Students</title>
 </head>
 <body>
     <div class="container">
         <?php include ('header.php')?>
-        <section class="books-section">
+        <section class="students-section">
 
         <div class="top-nav">
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
-                    <p>BOOKS</p>
+                    <p>STUDENTS</p>
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit"><img src="../img/search.png" alt="search"></button>
                 </form>
@@ -35,33 +34,27 @@
             <!-- try using js to add content of form -->
             <form class="modal-content" action="#">
                 <div class="form-content">
-                    <h1>Add Book</h1>
+                    <h1>Add Students</h1>
                     <hr>
-                    <label for="title"><b>Title</b></label>
-                    <input type="text" placeholder="Title..." name="title" class="input-field" required>
+                    <label for="fname"><b>First Name</b></label>
+                    <input type="text" placeholder="First Name..." name="fname" class="input-field" required>
 
-                    <label for="author"><b>Author</b></label>
-                    <input type="text" placeholder="Author's name..." name="author" class="input-field" required>
+                    <label for="lname"><b>Last Name</b></label>
+                    <input type="text" placeholder="Last name..." name="lname" class="input-field" required>
 
-                    <label for="publisher"><b>Publisher</b></label>
-                    <input type="text" placeholder="Publisher..." name="publisher" class="input-field" required>
+                    <label for="dept"><b>Department</b></label>
+                    <input type="text" placeholder="Department..." name="dept" class="input-field" required>
 
-                    <label for="category"><b>Category</b></label>
-                    <select name="category">
-                        <option value="000">Information/General Studies</option>
-                        <option value="100">Philosophy/Psychology</option>
-                        <option value="200">Religion</option>
-                        <option value="300">Social Science</option>
-                        <option value="400">Language</option>
-                        <option value="500">Science</option>
-                        <option value="600">Technology/Applied Science</option>
-                        <option value="700">Arts/Humanity</option>
-                        <option value="800">Literature</option>
-                        <option value="900">History/Geography</option>
+                    <label for="college"><b>College</b></label>
+                    <select name="college">
+                        <option value="copas">College of Pure and Applied Science</option>
+                        <option value="cosomas">College of Social and Management Science</option>
+                        <option value="colensma">College of Environment Science and Management</option>
+                        <option value="copos">College of Postgraduate Studies</option>
                     </select>
                     
-                    <label for="edition"><b>Edition</b></label>
-                    <input type="text" placeholder="Edition..." name="edition" class="input-field" required>
+                    <label for="level"><b>Level</b></label>
+                    <input type="number" name="level" class="input-field" required>
 
                     <div class="btns">
                         <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
