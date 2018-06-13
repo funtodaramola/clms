@@ -115,13 +115,13 @@
             ?>
             <?php 
             // displaying book info into main div
-                while($book_info = mysqli_fetch_assoc($selected)){
-                echo $book_info['book_id'] . "<br>";
-                echo $book_info['title'] . "<br>";
-                echo $book_info['author'] . "<br>";
-                echo $book_info['category'] . "<br>";
-                echo $book_info['publisher'] . "<br>";
-                echo $book_info['edition'] . "<br>";
+                while($book_data = mysqli_fetch_assoc($selected)){
+                $book_data['title'];
+                $book_data['author'];
+                $book_no = $book_data['category'] . $book_data['book_id'];
+                $book_data['publisher'];
+                $book_data['edition'];
+                echo "{$book_no}";
                 echo "<hr>";
                 }
             ?>
