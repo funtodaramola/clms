@@ -1,12 +1,12 @@
 <?php require ('db.php')?>
 <?php
     //check if form is submitted
-    if (isset($_POST["add"])) {
-        $title = $_POST["title"];
-        $author = $_POST["author"];
-        $publisher = $_POST["publisher"];
-        $category = $_POST["category"];
-        $edition = $_POST["edition"];
+    if (isset($_POST['add'])) {
+        $title = $_POST['title'];
+        $author = $_POST['author'];
+        $publisher = $_POST['publisher'];
+        $category = $_POST['category'];
+        $edition = $_POST['edition'];
         $response = "Successfully added book";
 
         // adding books to db
@@ -15,7 +15,6 @@
         $update_query .= ") VALUES (";
         $update_query .= " '{$title}', '{$author}', {$category}, '{$publisher}', '{$edition}'";
         $update_query .= ")";
-
         $updated = mysqli_query($connection, $update_query);
     } else {
         $response = null;
@@ -102,8 +101,8 @@
             </form>
         </div>
         <div class="main">
-        <!-- db query to update db -->
             <?php 
+            // update books table
                 if (isset($_POST["add"])) {
                     // test for error
                 if ($updated) {
@@ -112,6 +111,18 @@
                 } else {
                     die("Books update failed. " . mysqli_error($connection));
                 }
+                }
+            ?>
+            <?php 
+            // displaying book info into main div
+                while($book_info = mysqli_fetch_assoc($selected)){
+                echo $book_info['book_id'] . "<br>";
+                echo $book_info['title'] . "<br>";
+                echo $book_info['author'] . "<br>";
+                echo $book_info['category'] . "<br>";
+                echo $book_info['publisher'] . "<br>";
+                echo $book_info['edition'] . "<br>";
+                echo "<hr>";
                 }
             ?>
             <?php
