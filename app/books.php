@@ -1,5 +1,5 @@
+<?php require ('db.php')?>
 // add php to validate login else redirect
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

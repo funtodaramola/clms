@@ -1,3 +1,4 @@
+<?php require ('app/db.php')?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,3 +53,7 @@
     
 </body>
 </html>
+<?php
+  //Close database connection
+  mysqli_close($connection);
+?>
