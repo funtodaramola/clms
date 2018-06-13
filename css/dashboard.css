@@ -94,7 +94,7 @@ footer {
     cursor: pointer;
 }
 
-/* style for search bar */
+/* style for search bar to be on same line with add icon*/
 .search-container {
     float: right;
 }
@@ -245,4 +245,5 @@ hr {
     display: inline;
     font-size: 1.4em;
     font-weight: bold;
+    color: #e5e5e5;
 }
