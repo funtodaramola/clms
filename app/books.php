@@ -1,4 +1,14 @@
 <?php require ('db.php')?>
+<?php
+	//Perform database query
+	$query  = "SELECT * FROM books ";
+	$result = mysqli_query($connection, $query);
+	// Test if there was a query error
+	if (!$result) {
+		die("Database query failed.");
+	}
+?>
+
 // add php to validate login else redirect
 <!DOCTYPE html>
 <html lang="en">
@@ -70,10 +80,18 @@
             </form>
         </div>
         <div class="main">
-            
+
+            <?php
+                //Release returned data
+                mysqli_free_result($result);
+            ?>
         </div>
         </section>
         <?php include ('footer.php')?>
     </div>
 </body>
 </html>
+<?php
+  //Close database connection
+  mysqli_close($connection);
+?>
