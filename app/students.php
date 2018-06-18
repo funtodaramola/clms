@@ -99,8 +99,6 @@
                         <option value="ICH">Industrial Chemistry</option>
                         <option value="CSC">Computer Science</option>
                         <option value="PHY">Physics</option>
-                        <option value="MAS">Mass Communication</option>
-                        <option value="PHY">Physics</option>
                         </span>
                         <!-- colensma -->
                         <span id="copas">
@@ -147,42 +145,58 @@
                 $student_data['college'];
                 $student_data['level'];
                 $library_no = $student_data['dept'] . "/" . $student_data['student_id'];
-                // switch ($student_data['category']) {
-                //     case 000:
-                //         $book_category = "Information/General Studies";
-                //         break;
-                //     case 100:
-                //         $book_category = "Philosophy/Psycology";
-                //         break;
-                //     case 200:
-                //         $book_category = "Religion";
-                //         break;
-                //     case 300:
-                //         $book_category = "Social Science";
-                //         break;
-                //     case 400:
-                //         $book_category = "Language";
-                //         break;
-                //     case 500:
-                //         $book_category = "Pure Science";
-                //         break;
-                //     case 600:
-                //         $book_category = "Technology/Applied Science";
-                //         break;
-                //     case 700:
-                //         $book_category = "Arts/Hummanity";
-                //         break;
-                //     case 800:
-                //         $book_category = "Literature";
-                //         break;
-                //     case 900:
-                //         $book_category = "History/Geography";
-                //         break;
-                //     default:
-                //         $book_category = "Invalid Category";
-                // }
+                // switches back to easy to understand department names
+                switch ($student_data['dept']) {
+                    case "ACC":
+                        $student_dept = "Accounting";
+                        break;
+                    case "BUS":
+                        $student_dept = "Business Administration";
+                        break;
+                    case "ECO":
+                        $student_dept = "Economics";
+                        break;
+                    case "MAS":
+                        $student_dept = "Mass Communication";
+                        break;
+                    case "POS":
+                        $student_dept = "Political Science";
+                        break;
+                    case "IRS":
+                        $student_dept = "International Relations";
+                        break;
+                    case "CRM":
+                        $student_dept = "Criminology, Peace and Conflict Resolution";
+                        break;
+                    case "MCB":
+                        $student_dept = "MicroBiology";
+                        break;
+                    case "BCH":
+                        $student_dept = "BioChemistry";
+                        break;
+                    case "ICH":
+                        $student_dept = "Industrial Chemistry";
+                        break;
+                    case "CSC":
+                        $student_dept = "Computer Science";
+                        break;
+                    case "PHY":
+                        $student_dept = "Physics";
+                        break;
+                    case "ARC":
+                        $student_dept = "Architecture";
+                        break;
+                    case "BUD":
+                        $student_dept = "Building";
+                        break;
+                    case "SUY":
+                        $student_dept = "Quantity Survey";
+                        break;
+                    default:
+                        $student_dept = "Invalid Department";
+                }
                 echo "{$library_no}";
-                // echo "{$book_category}";
+                echo "{$student_dept}";
                 echo "<hr>";
                 }
             ?>
