@@ -1,4 +1,14 @@
+<?php require ('db.php')?>
 
+<?php
+	//Perform database query
+	$select_query  = "SELECT * FROM students ";
+	$selected = mysqli_query($connection, $select_query);
+	// Test if there was a query error
+	if (!$selected) {
+		die("Database query failed.");
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +74,18 @@
             </form>
         </div>
         <div class="main">
-            
+
+            <?php
+                //Release returned data
+                mysqli_free_result($selected);
+            ?>
         </div>
         </section>
         <?php include ('footer.php')?>
     </div>
 </body>
 </html>
+<?php
+  //Close database connection
+  mysqli_close($connection);
+?>
