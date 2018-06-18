@@ -1,6 +1,6 @@
 <?php require ('db.php')?>
 <?php
-    //check if form is submitted
+    //check if form is developer123&submitted
     if (isset($_POST['add'])) {
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
@@ -73,7 +73,29 @@
                     <input type="text" placeholder="Last name..." name="lname" class="input-field" required>
 
                     <label for="dept"><b>Department</b></label>
-                    <input type="text" placeholder="Department..." name="dept" class="input-field" required>
+                    <select name="dept">
+                        <!-- cosomas -->
+                        <option value="ACC">Accounting</option>
+                        <option value="BUS">Business Administration</option>
+                        <option value="ECO">Economics</option>
+                        <option value="MAS">Mass Communication</option>
+                        <option value="POS">Political Science</option>
+                        <option value="IRS">International Relations</option>
+                        <option value="CRM">Criminology, Peace and Conflict Resolution</option>
+                        <!-- copas -->
+                        <option value="MCB">MicroBiology</option>
+                        <option value="BCH">BioChemistry</option>
+                        <option value="ICH">Industrial Chemistry</option>
+                        <option value="CSC">Computer Science</option>
+                        <option value="PHY">Physics</option>
+                        <option value="MAS">Mass Communication</option>
+                        <option value="PHY">Physics</option>
+                        <!-- colensma -->
+                        <option value="ARC">Architecture</option>
+                        <option value="BUD">Building</option>
+                        <option value="SUY">Quantity Surveying</option>
+                    </select>
+                    <!-- <input type="text" placeholder="Department..." name="dept" class="input-field" required> -->
 
                     <!-- link department to college later -->
                     <label for="college"><b>College</b></label>
