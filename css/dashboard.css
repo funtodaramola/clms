@@ -94,28 +94,28 @@ footer {
     cursor: pointer;
 }
 
-/* style for search bar */
+/* style for search bar to be on same line with add icon*/
 .search-container {
     float: right;
 }
-.books-top{
+.top-nav{
     border-bottom: 3px solid #1abc9c;
 }
-.books-top input[type=text] {
+.top-nav input[type=text] {
     padding: 12px;
     margin: 13px 0 1em 0;
     font-size: 1em;
     border: none;
     outline: none;
 }
-.books-top .search-container button {
+.top-nav .search-container button {
     float: right;
     margin: 1em 2em 0 0;
     background: #ddd;
     border: none;
     cursor: pointer;
 }
-.books-top .search-container button img{
+.top-nav .search-container button img{
     width: 3em;
     height: auto;
 }
@@ -245,4 +245,5 @@ hr {
     display: inline;
     font-size: 1.4em;
     font-weight: bold;
+    color: #e5e5e5;
 }
