@@ -145,6 +145,7 @@
                 $student_data['college'];
                 $student_data['level'];
                 $library_no = $student_data['dept'] . "/" . $student_data['student_id'];
+                $student_name = ucfirst(strtolower($student_data['fname'])) . " " . ucfirst(strtolower($student_data['lname']));
                 // switches back to easy to understand department names
                 switch ($student_data['dept']) {
                     case "ACC":
@@ -196,6 +197,7 @@
                         $student_dept = "Invalid Department";
                 }
                 echo "{$library_no}";
+                echo "{$student_name}";
                 echo "{$student_dept}";
                 echo "<hr>";
                 }
