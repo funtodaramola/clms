@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/queryscript.js"></script>
+    <script src="../js/script.js"></script>
     <title>CLMS Dashboard</title>
 </head>
 <body>
