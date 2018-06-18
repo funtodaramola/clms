@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/queryscript.js"></script>
     <title>CLMS Dashboard</title>
 </head>
 <body>
@@ -33,7 +35,7 @@
 
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="students.php">
                         <button class="btn" id="student"><img src="../img/student.png" alt="Students"></button>
                     </a>
                     <h2>Students</h2>
