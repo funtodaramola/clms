@@ -140,6 +140,53 @@
                 }
             ?>
             <?php
+            while($student_data = mysqli_fetch_assoc($selected)){
+                $student_data['fname'];
+                $student_data['lname'];
+                $student_data['dept'];
+                $student_data['college'];
+                $student_data['level'];
+                $library_no = $student_data['dept'] . "/" . $student_data['student_id'];
+                // switch ($student_data['category']) {
+                //     case 000:
+                //         $book_category = "Information/General Studies";
+                //         break;
+                //     case 100:
+                //         $book_category = "Philosophy/Psycology";
+                //         break;
+                //     case 200:
+                //         $book_category = "Religion";
+                //         break;
+                //     case 300:
+                //         $book_category = "Social Science";
+                //         break;
+                //     case 400:
+                //         $book_category = "Language";
+                //         break;
+                //     case 500:
+                //         $book_category = "Pure Science";
+                //         break;
+                //     case 600:
+                //         $book_category = "Technology/Applied Science";
+                //         break;
+                //     case 700:
+                //         $book_category = "Arts/Hummanity";
+                //         break;
+                //     case 800:
+                //         $book_category = "Literature";
+                //         break;
+                //     case 900:
+                //         $book_category = "History/Geography";
+                //         break;
+                //     default:
+                //         $book_category = "Invalid Category";
+                // }
+                echo "{$library_no}";
+                // echo "{$book_category}";
+                echo "<hr>";
+                }
+            ?>
+            <?php
                 //Release returned data
                 mysqli_free_result($selected);
             ?>
