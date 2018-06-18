@@ -38,15 +38,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/queryscript.js"></script>
     <title>Library Books</title>
 </head>
 <body>
     <div class="container">
         <?php include ('header.php')?>
-
         <section class="books-section">
 
-        <div class="books-top">
+        <div class="top-nav">
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
@@ -116,11 +117,11 @@
             <?php 
             // displaying book info into main div
                 while($book_data = mysqli_fetch_assoc($selected)){
-                $book_data['title'];
-                $book_data['author'];
-                $book_data['publisher'];
-                $book_data['edition'];
                 $book_no = $book_data['category'] . $book_data['book_id'];
+                $book_title = strtoupper($book_data['title']);
+                $book_author = ucwords($book_data['author']);
+                $book_publisher = ucwords($book_data['publisher']);
+                $book_edition = $book_data['edition'];
                 switch ($book_data['category']) {
                     case 000:
                         $book_category = "Information/General Studies";
@@ -144,7 +145,7 @@
                         $book_category = "Technology/Applied Science";
                         break;
                     case 700:
-                        $book_category = "Arts/Hummanity";
+                        $book_category = "Arts/Humanity";
                         break;
                     case 800:
                         $book_category = "Literature";
@@ -156,6 +157,7 @@
                         $book_category = "Invalid Category";
                 }
                 echo "{$book_no}";
+                echo "{$book_title}";
                 echo "{$book_category}";
                 echo "<hr>";
                 }
