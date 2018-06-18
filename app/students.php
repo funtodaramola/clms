@@ -78,7 +78,7 @@
                         <option value="cosomas">College of Social and Management Science</option>
                         <option value="colensma">College of Environment Science and Management</option>
                     </select>
-                    
+
                     <!-- link department to college later -->
                     <label for="dept"><b>Department</b></label>
                     <select name="dept">
@@ -111,7 +111,13 @@
                     </select>
                     <!-- <input type="text" placeholder="Department..." name="dept" class="input-field" required> -->
                     <label for="level"><b>Level</b></label>
-                    <input type="number" name="level" class="input-field" required>
+                    <input type="number" name="level" class="input-field" step="100" min="100" max="400" list="defaultNumbers" required>
+                    <datalist id="defaultNumbers">
+                    <option value="100">
+                    <option value="200">
+                    <option value="300">
+                    <option value="400">
+                    </datalist>
 
                     <div class="btns">
                         <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
