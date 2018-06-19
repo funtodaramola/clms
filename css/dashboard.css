@@ -247,3 +247,11 @@ hr {
     font-weight: bold;
     color: #e5e5e5;
 }
+
+/* style for displayed books */
+.book-data{
+    display: block;
+    padding: 1em;
+    margin: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

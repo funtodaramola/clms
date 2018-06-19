@@ -119,7 +119,7 @@
                 while($book_data = mysqli_fetch_assoc($selected)){
                 $book_no = $book_data['category'] . $book_data['book_id'];
                 $book_title = strtoupper($book_data['title']);
-                $book_author = ucwords($book_data['author']);
+                $book_author = ucwords(strtolower($book_data['author']));
                 $book_publisher = ucwords($book_data['publisher']);
                 $book_edition = $book_data['edition'];
                 switch ($book_data['category']) {
@@ -156,10 +156,21 @@
                     default:
                         $book_category = "Invalid Category";
                 }
-                echo "{$book_no}";
-                echo "{$book_title}";
-                echo "{$book_category}";
-                echo "<hr>";
+            ?>
+            <div class="book-data">
+                <?php 
+                    
+                    echo "{$book_title} by ";
+                    echo "{$book_author}";
+                ?>
+                <p><?php echo "Book Number: {$book_no} "?></p>
+            </div>
+            
+            <?php
+                // echo "{$book_no}";
+                // echo "{$book_title}";
+                // echo "{$book_category}";
+                // echo "<hr>";
                 }
             ?>
             <?php
