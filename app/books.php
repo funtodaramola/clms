@@ -22,7 +22,8 @@
 ?>
 <?php
 	//Perform database query
-	$select_query  = "SELECT * FROM books ";
+    $select_query  = "SELECT * FROM books ";
+    $select_query  .= "ORDER BY book_id DESC";
 	$selected = mysqli_query($connection, $select_query);
 	// Test if there was a query error
 	if (!$selected) {
