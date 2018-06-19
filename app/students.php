@@ -139,6 +139,7 @@
             ?>
             <?php
             while($student_data = mysqli_fetch_assoc($selected)){
+                // this displayes students from db
                 $student_data['fname'];
                 $student_data['lname'];
                 $student_data['dept'];
@@ -196,10 +197,17 @@
                     default:
                         $student_dept = "Invalid Department";
                 }
-                echo "{$library_no}";
-                echo "{$student_name}";
-                echo "{$student_dept}";
-                echo "<hr>";
+            ?>
+            <div class="student-data">
+                <?php echo "{$student_name}"?>
+                <p><?php echo "Department: {$student_dept}"?></p>
+                <p><?php echo "Library Number: {$library_no} "?></p>
+            </div>
+            <?php
+                // echo "{$library_no}";
+                // echo "{$student_name}";
+                // echo "{$student_dept}";
+                // echo "<hr>";
                 }
             ?>
             <?php
