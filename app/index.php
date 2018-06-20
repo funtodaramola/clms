@@ -26,7 +26,7 @@
 
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="record.php">
                         <button class="btn" id="record"><img src="../img/records.png" alt="Records"></button>
                     </a>
                     <h2>Records</h2>
