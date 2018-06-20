@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/queryscript.js"></script>
+    <script src="../js/script.js"></script>
     <title>CLMS Dashboard</title>
 </head>
 <body>
@@ -44,7 +44,7 @@
             
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="issue.php">
                         <button class="btn" id="issue"><img src="../img/issue.png" alt="Issue Book"></button>
                     </a>
                     <h2>Book Issue</h2>

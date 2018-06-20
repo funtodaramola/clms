@@ -22,7 +22,8 @@
 ?>
 <?php
 	//Perform database query
-	$select_query  = "SELECT * FROM books ";
+    $select_query  = "SELECT * FROM books ";
+    $select_query  .= "ORDER BY book_id DESC";
 	$selected = mysqli_query($connection, $select_query);
 	// Test if there was a query error
 	if (!$selected) {
@@ -39,7 +40,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/queryscript.js"></script>
+    <script src="../js/script.js"></script>
     <title>Library Books</title>
 </head>
 <body>
@@ -119,7 +120,7 @@
                 while($book_data = mysqli_fetch_assoc($selected)){
                 $book_no = $book_data['category'] . $book_data['book_id'];
                 $book_title = strtoupper($book_data['title']);
-                $book_author = ucwords($book_data['author']);
+                $book_author = ucwords(strtolower($book_data['author']));
                 $book_publisher = ucwords($book_data['publisher']);
                 $book_edition = $book_data['edition'];
                 switch ($book_data['category']) {
@@ -156,10 +157,21 @@
                     default:
                         $book_category = "Invalid Category";
                 }
-                echo "{$book_no}";
-                echo "{$book_title}";
-                echo "{$book_category}";
-                echo "<hr>";
+            ?>
+            <div class="book-data">
+                <?php 
+                    
+                    echo "{$book_title} by ";
+                    echo "{$book_author}";
+                ?>
+                <p><?php echo "Book Number: {$book_no} "?></p>
+            </div>
+            
+            <?php
+                // echo "{$book_no}";
+                // echo "{$book_title}";
+                // echo "{$book_category}";
+                // echo "<hr>";
                 }
             ?>
             <?php
