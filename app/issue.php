@@ -1,3 +1,4 @@
+<?php require ('db.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
     <div class="container">
         <?php include ('header.php')?>
         <section class="issue-section">
-            <form action="#" method="post">
+            <form action="issue.php" method="post">
                 <div class="form-issue">
                     <h1>Issue Book</h1>
                     <hr>
@@ -31,3 +32,7 @@
     </div>
 </body>
 </html>
+<?php
+  //Close database connection
+  mysqli_close($connection);
+?>
