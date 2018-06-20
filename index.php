@@ -16,7 +16,7 @@
 <body>
     <!--Login form-->
     <div class="login">
-        <form action="app/index.php" method="post">
+        <form action="index.php" method="post">
             <input id=username type="text" name="username" placeholder="Username" required>
             <input id=password type="password" name="password" placeholder="Password" required>
             <input type="submit" name="login" value="Login">
