@@ -7,6 +7,7 @@
         $book_id = substr($book_no, 3);
         $library_no = $_POST['libraryNo'];
         $student_id = substr($library_no, 4);
+        $datedue = $_POST['datedue'];
 
     //     $title = $_POST['title'];
     //     $author = $_POST['author'];
@@ -60,6 +61,7 @@
             <?php 
             // echo $book_id;
             // echo $student_id;
+            // echo $datedue;
             ?>
         </section>
         <?php include ('footer.php'); ?>
