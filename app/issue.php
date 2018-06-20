@@ -14,7 +14,7 @@
         $update_query = "INSERT INTO issued (";
         $update_query .= " book_id, student_id, datedue";
         $update_query .= ") VALUES (";
-        $update_query .= " {$book_id}, {$student_id}, {$datedue}";
+        $update_query .= " {$book_id}, {$student_id}, DATE '{$datedue}'";
         $update_query .= ")";
         $updated = mysqli_query($connection, $update_query);
     } else {
@@ -53,9 +53,16 @@
                 </div>
             </form>
             <?php 
-            // echo $book_id;
-            // echo $student_id;
-            // echo $datedue;
+            // update books table
+                if (isset($_POST["issue"])) {
+                    // test for error
+                if ($updated) {
+                    // success
+                    echo "{$response}";
+                } else {
+                    die("Books update failed. " . mysqli_error($connection));
+                }
+                }
             ?>
         </section>
         <?php include ('footer.php'); ?>
