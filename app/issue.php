@@ -8,23 +8,17 @@
         $library_no = $_POST['libraryNo'];
         $student_id = substr($library_no, 4);
         $datedue = $_POST['datedue'];
+        $response = "Successfully issued book";
 
-    //     $title = $_POST['title'];
-    //     $author = $_POST['author'];
-    //     $publisher = $_POST['publisher'];
-    //     $category = $_POST['category'];
-    //     $edition = $_POST['edition'];
-    //     $response = "Successfully issued book";
-
-    //     // adding books to db
-    //     $update_query = "INSERT INTO books (";
-    //     $update_query .= " title, author, category, publisher, edition";
-    //     $update_query .= ") VALUES (";
-    //     $update_query .= " '{$title}', '{$author}', {$category}, '{$publisher}', '{$edition}'";
-    //     $update_query .= ")";
-    //     $updated = mysqli_query($connection, $update_query);
-    // } else {
-    //     $response = null;
+        // adding issued books to db
+        $update_query = "INSERT INTO issued (";
+        $update_query .= " book_id, student_id, datedue";
+        $update_query .= ") VALUES (";
+        $update_query .= " {$book_id}, {$student_id}, {$datedue}";
+        $update_query .= ")";
+        $updated = mysqli_query($connection, $update_query);
+    } else {
+        $response = null;
     }
 ?>
 <!DOCTYPE html>
