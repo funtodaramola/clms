@@ -1,4 +1,31 @@
 <?php require ('db.php')?>
+<?php
+    //check if form is submitted
+    if (isset($_POST['issue'])) {
+        // change the inputs into the book_id and student_id in db
+        $book_no = $_POST['bookNo'];
+        $book_id = substr($book_no, 3);
+        $library_no = $_POST['libraryNo'];
+        $student_id = substr($library_no, 4);
+
+    //     $title = $_POST['title'];
+    //     $author = $_POST['author'];
+    //     $publisher = $_POST['publisher'];
+    //     $category = $_POST['category'];
+    //     $edition = $_POST['edition'];
+    //     $response = "Successfully issued book";
+
+    //     // adding books to db
+    //     $update_query = "INSERT INTO books (";
+    //     $update_query .= " title, author, category, publisher, edition";
+    //     $update_query .= ") VALUES (";
+    //     $update_query .= " '{$title}', '{$author}', {$category}, '{$publisher}', '{$edition}'";
+    //     $update_query .= ")";
+    //     $updated = mysqli_query($connection, $update_query);
+    // } else {
+    //     $response = null;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +54,10 @@
                     <button type="submit" class="submit" name= "issue" value="issue"><span id="issueBtn">Issue</span></button>
                 </div>
             </form>
+            <?php 
+            // echo $book_id;
+            // echo $student_id;
+            ?>
         </section>
         <?php include ('footer.php'); ?>
     </div>
