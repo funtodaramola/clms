@@ -130,9 +130,9 @@ label{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
     font-size: 1em;
     color: #555555;
     display: inline-block;
@@ -142,9 +142,9 @@ label{
 }
 
 /* Set a style for modal box buttons */
-.btns button {
+.btns button, .submit {
     background-color: #1abc9c;
-    color: #ddd;
+    color: #fff;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -167,8 +167,8 @@ label{
     width: 50%;
 }
 
-/* Add padding to container elements */
-.form-content {
+/* Add padding to container elements and issue page form*/
+.form-content, .form-issue {
     padding: 1em;
 }
 
@@ -246,4 +246,12 @@ hr {
     font-size: 1.4em;
     font-weight: bold;
     color: #e5e5e5;
+}
+/* style for issue page */
+.form-issue{
+    max-width: 50%;
+    margin: auto;
+}
+.form-issue #issueBtn{
+    font-size: 1.2em;
 }

@@ -44,7 +44,7 @@
             
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="issue.php">
                         <button class="btn" id="issue"><img src="../img/issue.png" alt="Issue Book"></button>
                     </a>
                     <h2>Book Issue</h2>
