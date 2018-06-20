@@ -31,6 +31,11 @@
             }
             ?>
             <pre><?php  print_r($record);?></pre>
+            <?php 
+                // foreach($record as $record_row){
+                //     echo $record_row['book_id'];
+                // }
+            ?>
             
             <?php
                 //Release returned data
