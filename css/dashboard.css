@@ -125,7 +125,7 @@ label{
     font-size: 1.2em;
 }
 /* Full-width Add new input fields*/
-.input-field, select {
+.input-field, select,  input[type=date]{
     border: none;
     width: 100%;
     padding: 15px;
