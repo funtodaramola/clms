@@ -1,4 +1,4 @@
-<?php require ('db.php')?>
+<?php require ('../../includes/db.php')?>
 <?php
     //check if form is developer123&submitted
     if (isset($_POST['add'])) {
@@ -30,20 +30,8 @@
 		die("Database query failed.");
 	}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/script.js"></script>
-    <title>Students</title>
-</head>
-<body>
-    <div class="container">
-        <?php include ('header.php')?>
+
+<?php include ('../../includes/layouts/header.php')?>
         <section class="students-section">
 
         <div class="top-nav">
@@ -217,11 +205,4 @@
             ?>
         </div>
         </section>
-        <?php include ('footer.php')?>
-    </div>
-</body>
-</html>
-<?php
-  //Close database connection
-  mysqli_close($connection);
-?>
+<?php include ('../../includes/layouts/footer.php'); ?>
