@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box
+}
+h1 {
+    text-align: center;
+}
+body{
+    color: #e5e5e5;
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-image: url("../img/register.jpg");
+}
+
+.container{
+    max-width: 980px;
+    margin: 0px auto 0px auto;
+    position: relative;
+}
+
+
+/* style for add new book modal */
+label{
+    font-size: 1.2em;
+}
+/* Full-width Add new input fields*/
+.input-field, select {
+    border: none;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #555555;
+    display: inline-block;
+}
+.input-field:focus, select {
+    outline: none;
+}
+
+/* Set a style for modal box buttons */
+.btn button {
+    background-color: #1abc9c;
+    color: #ddd;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn button:hover {
+    opacity: 1;
+}
+
+
+
+/* Add padding to container elements */
+.form-content {
+    padding: 1em;
+}
+
+/* The Modal (background) */
+
+/* Modal Content/Box */
+.modal-content {
+    z-index: 1;
+    background-color: #64acc5;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
