@@ -8,7 +8,7 @@
         $category = $_POST['category'];
         $edition = $_POST['edition'];
         $response = "Successfully added book";
-        // add mysqli_real_escape_string($connection, $) later
+        //TODO add mysqli_real_escape_string($connection, $) later
 
         // adding books to db
         $update_query = "INSERT INTO books (";
