@@ -22,8 +22,15 @@ header{
     top: 512px;
     background-color: #1abc9c;
 } */
+ input[type=text] {
+	  width: 300px;
+	min-width: 210px;
+    max-width: 210px;
+ }
 
 .container{
+    width: 980px;
+	min-width: 980px;
     max-width: 980px;
     margin: 0px auto 0px auto;
     position: relative;
@@ -97,6 +104,7 @@ footer {
 /* style for search bar to be on same line with add icon*/
 .search-container {
     float: right;
+	
 }
 .top-nav{
     border-bottom: 3px solid #1abc9c;
