@@ -21,7 +21,7 @@
     }
 ?>
 <?php
-	//Perform database query
+	//Perform database query to select books from DB
     $select_query  = "SELECT * FROM students ";
      $select_query  .= "ORDER BY student_id DESC";
 	$selected = mysqli_query($connection, $select_query);
@@ -142,10 +142,6 @@
                 <p><?php echo "Library Number: {$library_no} "?></p>
             </div>
             <?php
-                // echo "{$library_no}";
-                // echo "{$student_name}";
-                // echo "{$student_dept}";
-                // echo "<hr>";
                 }
             ?>
             <?php

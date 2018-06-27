@@ -8,6 +8,7 @@
         $category = $_POST['category'];
         $edition = $_POST['edition'];
         $response = "Successfully added book";
+        //TODO add mysqli_real_escape_string($connection, $) later
 
         // adding books to db
         $update_query = "INSERT INTO books (";
@@ -111,7 +112,7 @@
                 $book_title = strtoupper($book_data['title']);
                 $book_author = ucwords(strtolower($book_data['author']));
                 $book_publisher = ucwords($book_data['publisher']);
-                $book_edition = $book_data['edition'];
+                $book_edition = $book_data['edition'];          
                 switch ($book_data['category']) {
                     case 000:
                         $book_category = "Information/General Studies";
@@ -157,10 +158,6 @@
             </div>
             
             <?php
-                // echo "{$book_no}";
-                // echo "{$book_title}";
-                // echo "{$book_category}";
-                // echo "<hr>";
                 }
             ?>
             <?php
