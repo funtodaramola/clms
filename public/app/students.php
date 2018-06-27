@@ -1,5 +1,5 @@
-<?php require ('db.php')?>
-<?php
+<?php require ('../../includes/db.php')?>
+<?php // TODO make this into a function since it will be on two pages
     //check if form is developer123&submitted
     if (isset($_POST['add'])) {
         $fname = $_POST['fname'];
@@ -30,20 +30,8 @@
 		die("Database query failed.");
 	}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <script src="../js/jquery-3.3.1.min.js"></script>
-    <script src="../js/script.js"></script>
-    <title>Students</title>
-</head>
-<body>
-    <div class="container">
-        <?php include ('header.php')?>
+
+<?php include ('../../includes/layouts/header.php')?>
         <section class="students-section">
 
         <div class="top-nav">
@@ -66,58 +54,7 @@
             <form class="modal-content" action="students.php" method="post">
                 <div class="form-content">
                     <h1>Add Students</h1>
-                    <hr>
-                    <label for="fname"><b>First Name</b></label>
-                    <input type="text" placeholder="First Name..." name="fname" class="input-field" required>
-
-                    <label for="lname"><b>Last Name</b></label>
-                    <input type="text" placeholder="Last name..." name="lname" class="input-field" required>
-                    
-                    <label for="college"><b>College</b></label>
-                    <select name="college">
-                        <option value="copas">College of Pure and Applied Science</option>
-                        <option value="cosomas">College of Social and Management Science</option>
-                        <option value="colensma">College of Environment Science and Management</option>
-                    </select>
-
-                    <!-- link department to college later -->
-                    <label for="dept"><b>Department</b></label>
-                    <select name="dept">
-                        <!-- cosomas -->
-                        <span id="cosomas">
-                        <option value="ACC">Accounting</option>
-                        <option value="BUS">Business Administration</option>
-                        <option value="ECO">Economics</option>
-                        <option value="MAS">Mass Communication</option>
-                        <option value="POS">Political Science</option>
-                        <option value="IRS">International Relations</option>
-                        <option value="CRM">Criminology, Peace and Conflict Resolution</option>
-                        </span>
-                        <!-- copas -->
-                        <span id="copas">
-                        <option value="MCB">MicroBiology</option>
-                        <option value="BCH">BioChemistry</option>
-                        <option value="ICH">Industrial Chemistry</option>
-                        <option value="CSC">Computer Science</option>
-                        <option value="PHY">Physics</option>
-                        </span>
-                        <!-- colensma -->
-                        <span id="copas">
-                        <option value="ARC">Architecture</option>
-                        <option value="BUD">Building</option>
-                        <option value="SUY">Quantity Surveying</option>
-                        </span>
-                    </select>
-                    <!-- <input type="text" placeholder="Department..." name="dept" class="input-field" required> -->
-                    <label for="level"><b>Level</b></label>
-                    <input type="number" name="level" class="input-field" step="100" min="100" max="400" list="defaultNumbers" required>
-                    <datalist id="defaultNumbers">
-                    <option value="100">
-                    <option value="200">
-                    <option value="300">
-                    <option value="400">
-                    </datalist>
-
+                    <?php require ('../../includes/layouts/register-form.php')?> <!-- form for adding new student-->
                     <div class="btns">
                         <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
                         <button type="add" class="submit" name="add" value="add">Add</button>
@@ -126,7 +63,7 @@
             </form>
         </div>
         <div class="main">
-            <?php 
+            <?php // TODO make this into a function since it will be on two pages
             // update students table
                 if (isset($_POST["add"])) {
                     // test for error
@@ -217,11 +154,4 @@
             ?>
         </div>
         </section>
-        <?php include ('footer.php')?>
-    </div>
-</body>
-</html>
-<?php
-  //Close database connection
-  mysqli_close($connection);
-?>
+<?php include ('../../includes/layouts/footer.php'); ?>
