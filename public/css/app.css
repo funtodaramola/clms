@@ -73,6 +73,18 @@ footer {
     background-color: #64acc5;
     padding: 10px;
 }
+/* style for return home */
+#return-home{
+    width: 100%;
+    max-width: 96px;
+    height: auto;
+    padding: 2em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    float: left;
+    outline: none;
+}
 .logout {
     display: inline;
     bottom: 0;
