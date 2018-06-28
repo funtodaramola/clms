@@ -74,7 +74,7 @@ footer {
     padding: 10px;
 }
 /* style for return home */
-.return-home{
+#return-home{
     width: 100%;
     max-width: 96px;
     height: auto;
