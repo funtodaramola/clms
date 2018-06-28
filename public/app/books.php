@@ -43,7 +43,7 @@
             <div class="search-container">
                 <form action="#">
                     <p>BOOKS</p>
-                    <input type="text" placeholder="Search..." name="search">
+                    <input type="text" class="bug" placeholder="Search..." name="search">
                     <button type="submit"><img src="../img/search.png" alt="search"></button>
                 </form>
             </div>
