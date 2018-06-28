@@ -35,7 +35,6 @@
 <!-- add php to validate login else redirect -->
 
 <?php include ('../../includes/layouts/header.php')?>
-
         <section class="books-section">
 
         <div class="top-nav">

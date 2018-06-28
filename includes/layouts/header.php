@@ -10,8 +10,13 @@
     <title>Caleb Library Management System</title>
 </head>
 <body>
+    
     <div class="container">
-    <header></header>
+    <header>
+        <a href="index.php">
+            <button class="return-home"><img src="../img/return-home.png" alt="Return Home"></button>
+        </a>
+    </header>
     <div class="feedback">
         <span>
             <!-- feedback based on action performed -->
