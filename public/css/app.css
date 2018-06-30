@@ -284,3 +284,138 @@ hr {
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+/* style for signup paragraph element */
+
+.signup {
+    font-size: .8em;
+    margin: 0 0 0 4px;
+}
+
+/* style for paragraph button element */
+
+.signup .btn {
+    background-color: transparent;
+    color: #e5e5e5;
+    border: none;
+    cursor: pointer;
+}
+
+/* Full-width SignUp input fields*/
+
+.signup-input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+}
+
+.signup-input:focus {
+    outline: none;
+}
+
+/* Set a style for modal box buttons */
+
+.btns button {
+    background-color: #1abc9c;
+    color: #ddd;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btns button:hover {
+    opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+
+.btns .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+.btns .cancelbtn,
+.btns .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+
+.container {
+    padding: 1em;
+}
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #555;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    z-index: 1;
+    background-color: #64acc5;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+
+.btns::after {
+    content: "";
+    clear: both;
+    display: table;
+}
