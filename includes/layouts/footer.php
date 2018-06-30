@@ -5,6 +5,7 @@
             <button class="add-admin">Account Settings</button>
             <!-- Button to open the modal -->
             <button onclick="document.getElementById('modal-form').style.display='block'" class="add-admin">Add Admin</button>
+            <!-- TODO add manage admins page-->
 
             <!-- <?php 
             $username = $_POST["username"];
@@ -29,9 +30,6 @@
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Password will be generated..." name="password" class="input-field" required>
-                <!-- add password repeat later -->
-                <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
 
                 <div class="btns">
                     <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
