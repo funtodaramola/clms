@@ -1,28 +1,13 @@
 <?php require ('../../includes/db.php')?>
 
 <?php require_once ("../../includes/functions.php")?>
-<?php // TODO make this into a function since it will be on two pages
-    //check if form is developer123&submitted
+<?php
     if (isset($_POST['add'])) {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $dept = $_POST['dept'];
-        $college = $_POST['college'];
-        $level = $_POST['level'];
-        $response = "Successfully added Student";
-
-        // adding students to db
-        $update_query = "INSERT INTO students (";
-        $update_query .= " fname, lname, dept, college, level";
-        $update_query .= ") VALUES (";
-        $update_query .= " '{$fname}', '{$lname}', '{$dept}', '{$college}', {$level}";
-        $update_query .= ")";
-        $updated = mysqli_query($connection, $update_query);
-    } else {
-        $response = null;
+        // add data to students table
+        $update_set = update_students();
     }
 ?>
-// selects all students from DB
+<!-- selects all students from DB -->
 <?php $student_set = find_all_from('students', 'student_id'); ?>
 
 <?php include ('../../includes/layouts/header.php')?>
@@ -47,7 +32,7 @@
             <!-- try using js to add content of form -->
             <form class="modal-content" action="students.php" method="post">
                 <div class="form-content">
-                    <h1>Add Students</h1>
+                    <h1>Add Student</h1>
                     <?php require ('../../includes/layouts/register-form.php')?> <!-- form for adding new student-->
                     <div class="btns">
                         <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
@@ -57,16 +42,10 @@
             </form>
         </div>
         <div class="main">
-            <?php // TODO make this into a function since it will be on two pages
-            // update students table
+            <?php
                 if (isset($_POST["add"])) {
-                    // test for error
-                if ($updated) {
-                    // success
-                    echo "{$response}";
-                } else {
-                    die("Students update failed. " . mysqli_error($connection));
-                }
+                    // test for error while adding data
+                    confirm_query($update_set);
                 }
             ?>
             <?php

@@ -1,33 +1,9 @@
 <?php require ('../includes/db.php')?>
 <?php
-    //check if form is developer123&submitted
     if (isset($_POST['add'])) {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $dept = $_POST['dept'];
-        $college = $_POST['college'];
-        $level = $_POST['level'];
-        $response = "Successfully added Student";
-
-        // adding students to db
-        $update_query = "INSERT INTO students (";
-        $update_query .= " fname, lname, dept, college, level";
-        $update_query .= ") VALUES (";
-        $update_query .= " '{$fname}', '{$lname}', '{$dept}', '{$college}', {$level}";
-        $update_query .= ")";
-        $updated = mysqli_query($connection, $update_query);
-    } else {
-        $response = null;
+        // add data to students table
+        $update_set = update_students();
     }
-?>
-<?php
-	//Perform database query
-	$select_query  = "SELECT * FROM students ";
-	$selected = mysqli_query($connection, $select_query);
-	// Test if there was a query error
-	if (!$selected) {
-		die("Database query failed.");
-	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,16 +32,10 @@
             
         </div>
         <div class="main">
-            <?php // TODO make this into a function since it will be on two pages
-            // update students table
+            <?php
                 if (isset($_POST["add"])) {
-                    // test for error
-                if ($updated) {
-                    // success
-                    echo "{$response}";
-                } else {
-                    die("Students update failed. " . mysqli_error($connection));
-                }
+                    // test for error while adding data
+                    confirm_query($update_set);
                 }
             ?>
             

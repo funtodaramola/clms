@@ -27,17 +27,22 @@
     return $result_set;
   }
   
-//   function update_students($firstname, $lastname, $department, $College, $lvl){
-//     global $connection;
+  function update_students(){
+    global $connection;
 
-//     // adding students to db
-//     $update_query = "INSERT INTO students (";
-//     $update_query .= " fname, lname, dept, college, level";
-//     $update_query .= ") VALUES (";
-//     $update_query .= " '{$firstname}', '{$lastname}', '{$department}', '{$College}', {$lvl}";
-//     $update_query .= ")";
-//     $update_set = mysqli_query($connection, $update_query);
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $dept = $_POST['dept'];
+    $college = $_POST['college'];
+    $level = $_POST['level'];
+    // adding students to db
+    $update_query = "INSERT INTO students (";
+    $update_query .= " fname, lname, dept, college, level";
+    $update_query .= ") VALUES (";
+    $update_query .= " '{$fname}', '{$lname}', '{$dept}', '{$college}', {$level}";
+    $update_query .= ")";
+    $update_set = mysqli_query($connection, $update_query);
     
-//     return $update_set;
-//   }
+    return $update_set;
+  }
 ?>
