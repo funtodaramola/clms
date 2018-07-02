@@ -22,16 +22,8 @@
         $response = null;
     }
 ?>
-<?php
-	//Perform database query to select books from DB
-    $select_query  = "SELECT * FROM students ";
-     $select_query  .= "ORDER BY student_id DESC";
-	$selected = mysqli_query($connection, $select_query);
-	// Test if there was a query error
-	if (!$selected) {
-		die("Database query failed.");
-	}
-?>
+// selects all students from DB
+<?php $student_set = find_all_from('students', 'student_id'); ?>
 
 <?php include ('../../includes/layouts/header.php')?>
         <section class="students-section">
@@ -78,7 +70,7 @@
                 }
             ?>
             <?php
-            while($student_data = mysqli_fetch_assoc($selected)){
+            while($student_data = mysqli_fetch_assoc($student_set)){
                 // this displayes students from db
                 $student_data['fname'];
                 $student_data['lname'];
@@ -148,7 +140,7 @@
             ?>
             <?php
                 //Release returned data
-                mysqli_free_result($selected);
+                mysqli_free_result($student_set);
             ?>
         </div>
         </section>

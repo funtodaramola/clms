@@ -23,16 +23,8 @@
         $response = null;
     }
 ?>
-<?php
-	//Perform database query
-    $select_query  = "SELECT * FROM books ";
-    $select_query  .= "ORDER BY book_id DESC";
-	$selected = mysqli_query($connection, $select_query);
-	// Test if there was a query error
-	if (!$selected) {
-		die("Database query failed.");
-	}
-?>
+// selects all books from DB
+<?php $book_set = find_all_from('books', 'book_id'); ?>
 
 <!-- add php to validate login else redirect -->
 
@@ -108,7 +100,7 @@
             ?>
             <?php 
             // displaying book info into main div
-                while($book_data = mysqli_fetch_assoc($selected)){
+                while($book_data = mysqli_fetch_assoc($book_set)){
                 $book_no = $book_data['category'] . $book_data['book_id'];
                 $book_title = strtoupper($book_data['title']);
                 $book_author = ucwords(strtolower($book_data['author']));
@@ -163,7 +155,7 @@
             ?>
             <?php
                 //Release returned data
-                mysqli_free_result($selected);
+                mysqli_free_result($book_set);
             ?>
         </div>
         </section>
