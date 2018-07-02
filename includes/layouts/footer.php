@@ -4,7 +4,7 @@
         <span>
             <button class="add-admin">Account Settings</button>
             <!-- Button to open the modal -->
-            <button onclick="document.getElementById('modal-form').style.display='block'" class="add-admin">Add Admin</button>
+            <button onclick="document.getElementById('add-admin').style.display='block'" class="add-admin">Add Admin</button>
             <!-- TODO add manage admins page-->
 
             <!-- <?php 
@@ -15,7 +15,7 @@
         </span>
     </div>
     <!-- The Modal (contains the Add admin form) -->
-    <div id="modal-form" class="modal-form">
+    <div id="add-admin" class="modal-form">
         <!-- span to close the modal -->
             <span onclick="document.getElementById('modal-form').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
         <form class="modal-content" action="#" method="post">
