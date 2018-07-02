@@ -1,18 +1,12 @@
 <?php
-    // function redirect_to($new_location){
-    //     header("Location: ". $new_location);
-    //     exit;
-    // }
-?>
-<?php 
-    // require_once('functions.php');
-
-    // if (isset($_POST["Login"])) {
-    //     redirect_to("index.php");
-    // }
+    function redirect_to($new_location){
+        header("Location: ". $new_location);
+        exit;
+    }
 ?>
 
 <?php
+
 // function to test for database database failure
   function confirm_query($result_set){
     if (!$result_set) {
@@ -32,4 +26,18 @@
 
     return $result_set;
   }
+  
+//   function update_students($firstname, $lastname, $department, $College, $lvl){
+//     global $connection;
+
+//     // adding students to db
+//     $update_query = "INSERT INTO students (";
+//     $update_query .= " fname, lname, dept, college, level";
+//     $update_query .= ") VALUES (";
+//     $update_query .= " '{$firstname}', '{$lastname}', '{$department}', '{$College}', {$lvl}";
+//     $update_query .= ")";
+//     $update_set = mysqli_query($connection, $update_query);
+    
+//     return $update_set;
+//   }
 ?>
