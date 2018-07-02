@@ -1,4 +1,10 @@
-<?php require ('../includes/db.php');?>
+<?php 
+    require_once ("../includes/functions.php");
+    if (isset($_POST["login"])) {
+        redirect_to("app/index.php");
+    }
+    require ('../includes/db.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +22,7 @@
 <body>
     <!--Login form-->
     <div class="login">
-        <form action="app/index.php" method="post">
+        <form action="index.php" method="post">
             <input id=username type="text" name="username" placeholder="Username" required>
             <input id=password type="password" name="password" placeholder="Password" required>
             <input type="submit" name="login" value="Login">
