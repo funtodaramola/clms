@@ -1,4 +1,6 @@
 <?php require ('../../includes/db.php')?>
+
+<?php require_once ("../../includes/functions.php")?>
 <?php // TODO make this into a function since it will be on two pages
     //check if form is developer123&submitted
     if (isset($_POST['add'])) {

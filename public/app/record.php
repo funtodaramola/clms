@@ -1,4 +1,6 @@
 <?php require ('../../includes/db.php')?>
+
+<?php require_once ("../../includes/functions.php")?>
 <?php
 	//Perform database query
     $select_query  = "SELECT * FROM issued ";

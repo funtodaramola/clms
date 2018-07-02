@@ -1,4 +1,6 @@
 <?php require ('../../includes/db.php')?>
+
+<?php require_once ("../../includes/functions.php")?>
 <?php
     //check if form is submitted
     if (isset($_POST['issue'])) {
