@@ -17,7 +17,7 @@
     <!-- The Modal (contains the Add admin form) -->
     <div id="add-admin" class="modal-form">
         <!-- span to close the modal -->
-            <span onclick="document.getElementById('modal-form').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('add-admin').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
         <form class="modal-content" action="#" method="post">
             <div class="form-content">
                 <h1>New Admin</h1>
@@ -32,7 +32,7 @@
                 <input type="password" placeholder="Password will be generated..." name="password" class="input-field" required>
 
                 <div class="btns">
-                    <button type="button" onclick="document.getElementById('modal-form').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('add-admin').style.display='none'" class="cancelbtn">Cancel</button>
                     <button type="submit" class="submit">Add</button>
                 </div>
             </div>
