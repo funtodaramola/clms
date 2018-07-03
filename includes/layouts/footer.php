@@ -2,9 +2,35 @@
     <span>&copy; Caleb University || Library</span>
     <div class="logout">
         <span>
-            <button class="add-admin">Account Settings</button>
+            <button id="myBtn" onclick="document.getElementById('add-admin1').style.display='block'" class="add-admin">Account Settings</button>
+			<div id="add-admin1" class="modal-form">
+			
+    
+	<span onclick="document.getElementById('add-admin1').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
+	<form class="modal-content" action="#" method="post">
+            <div class="form-content">
+                <h1>Update User Info</h1> 
+                <hr>				
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="New Username..." name="username" class="input-field" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="New Password..." name="password" class="input-field" required>
+
+                <div class="btns">
+                    <button type="button" onclick="document.getElementById('add-admin1').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="submit">Update</button>
+                </div>
+            </div>
+        </form>
+ 
+
+</div>
+
+
+
             <!-- Button to open the modal -->
-            <button onclick="document.getElementById('add-admin').style.display='block'" class="add-admin">Add Admin</button>
+            <button onclick="document.getElementById('add-admin2').style.display='block'" class="add-admin">Add Admin</button>
             <!-- TODO add manage admins page-->
 
             <!-- <?php 
@@ -13,11 +39,13 @@
             ?> -->
             <!-- Need to fix this after connecting to database of registered users -->
         </span>
+	
     </div>
     <!-- The Modal (contains the Add admin form) -->
-    <div id="add-admin" class="modal-form">
+    <div id="add-admin2" class="modal-form">
+	
         <!-- span to close the modal -->
-            <span onclick="document.getElementById('add-admin').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('add-admin2').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
         <form class="modal-content" action="#" method="post">
             <div class="form-content">
                 <h1>New Admin</h1>
@@ -32,12 +60,13 @@
                 <input type="password" placeholder="Password will be generated..." name="password" class="input-field" required>
 
                 <div class="btns">
-                    <button type="button" onclick="document.getElementById('add-admin').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="document.getElementById('add-admin2').style.display='none'" class="cancelbtn">Cancel</button>
                     <button type="submit" class="submit">Add</button>
                 </div>
             </div>
         </form>
     </div>
+
 </footer>
 </div>
 </body>

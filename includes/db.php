@@ -1,8 +1,8 @@
 <?php
 //   Create a database connection
   $dbhost = "localhost";
-  $dbuser = "library_admin";
-  $dbpass = "royal6";
+  $dbuser = "root";
+  $dbpass = "";
   $dbname = "clms";
   $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
   // Test if connection succeeded
