@@ -26,9 +26,8 @@
  
 
 </div>
-<script>
 
-</script>
+
 
             <!-- Button to open the modal -->
             <button onclick="document.getElementById('add-admin2').style.display='block'" class="add-admin">Add Admin</button>
@@ -40,6 +39,7 @@
             ?> -->
             <!-- Need to fix this after connecting to database of registered users -->
         </span>
+	
     </div>
     <!-- The Modal (contains the Add admin form) -->
     <div id="add-admin2" class="modal-form">
@@ -66,6 +66,7 @@
             </div>
         </form>
     </div>
+
 </footer>
 </div>
 </body>

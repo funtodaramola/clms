@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/app.css">
     <script src="../../public/js/jquery-3.3.1.min.js"></script>
     <script src="../../public/js/script.js"></script>
+	<script src="../../public/js/scripts.js"></script>
     <title>Caleb Library Management System</title>
 </head>
 <body>
