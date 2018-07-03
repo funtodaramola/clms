@@ -32,7 +32,7 @@
         <section class="books-section">
 
         <div class="top-nav">
-            <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
+            <button  onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <div class="search-container">
                 <form action="#">
                     <p>BOOKS</p>
@@ -83,8 +83,9 @@
                         <button type="submit" class="submit" name= "add" value="add">Add</button>
                     </div>
                 </div>
-            </form>
+            </form>	
         </div>
+	
         <div class="main">
             <?php 
             // update books table
@@ -160,3 +161,4 @@
         </div>
         </section>
 <?php include ('../../includes/layouts/footer.php'); ?>
+
