@@ -1,7 +1,7 @@
 <?php
 //   Create a database connection
   $dbhost = "localhost";
-  $dbuser = "root";
+  $dbuser = "library_admin";
   $dbpass = "";
   $dbname = "clms";
   $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
