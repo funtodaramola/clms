@@ -9,17 +9,17 @@
 	<span onclick="document.getElementById('add-admin1').style.display='none'" class="close-modal" title="Close Modal">&times;</span>
 	<form class="modal-content" action="#" method="post">
             <div class="form-content">
-                <h1>Login</h1> 
+                <h1>Update User Info</h1> 
                 <hr>				
                 <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Username" name="username" class="input-field" required>
+                <input type="text" placeholder="New Username..." name="username" class="input-field" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Password" name="password" class="input-field" required>
+                <input type="password" placeholder="New Password..." name="password" class="input-field" required>
 
                 <div class="btns">
                     <button type="button" onclick="document.getElementById('add-admin1').style.display='none'" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="submit">Login</button>
+                    <button type="submit" class="submit">Update</button>
                 </div>
             </div>
         </form>
