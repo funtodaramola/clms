@@ -3,7 +3,7 @@
   $dbhost = "localhost";
   $dbuser = "library_admin";
   $dbpass = "";
-  $dbname = "clms";
+  $dbname = "clms_db";
   $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
   // Test if connection succeeded
   if(mysqli_connect_errno()) {
