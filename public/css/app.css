@@ -290,7 +290,7 @@ hr {
 
 /* style for add admin button in footer */
 
-.add-admin {
+.add-admin, .account {
     background-color: transparent;
     color: #e5e5e5;
     border: none;
