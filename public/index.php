@@ -13,11 +13,7 @@
             if (mysqli_num_rows($login_set) == NULL) {
                 echo 'INVALID login details.';
             } else {
-                while ($login_row = mysqli_fetch_assoc($login_set)) {
-                    $user = $login_row['Username'];
-                    echo 'Welcome, Super Admin'. $user .'<br>';
-                    redirect_to("app/index.php");
-                }
+                redirect_to("app/index.php");
             }
         } else {
             echo mysqli_error();
