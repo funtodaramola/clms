@@ -4,16 +4,8 @@
         <span>
             <!-- Buttons to open the modal -->
             <button id="myBtn" onclick="document.getElementById('account').style.display='block'" class="foot_btn">Account Settings</button>
-<<<<<<< HEAD
-            <button onclick="document.getElementById('add-admin').style.display='block'" class="foot_btn">Add Admin</button>
-            <button class="foot_btn"><a href="../../public/index.php">Logout</a></button>
-||||||| merged common ancestors
-            <button onclick="document.getElementById('add-admin').style.display='block'" class="foot_btn">Add Admin</button>
-            <button class="foot_btn">Logout</button>
-=======
             <button class="foot_btn"><a href="../../public/app/manage.php">Manage Admin</a></button>
             <button class="foot_btn">Logout</button>
->>>>>>> account
         </span>
     </div>
 
