@@ -280,7 +280,7 @@ hr {
 }
 
 /* style for displayed books */
-.book-data, .student-data{
+.data{
     display: block;
     padding: 1em;
     margin: 1.5em;

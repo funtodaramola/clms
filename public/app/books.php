@@ -113,8 +113,8 @@
                 $book_no = $book_data['category'] . $book_data['book_id'];
                 $book_title = strtoupper($book_data['title']);
                 $book_author = ucwords(strtolower($book_data['author']));
-                $book_publisher = ucwords($book_data['publisher']);
-                $book_edition = $book_data['edition'];          
+                // $book_publisher = ucwords($book_data['publisher']);
+                // $book_edition = $book_data['edition'];          
                 switch ($book_data['category']) {
                     case 000:
                         $book_category = "Information/General Studies";
@@ -150,7 +150,7 @@
                         $book_category = "Invalid Category";
                 }
             ?>
-            <div class="book-data">
+            <div class="data">
                 <?php 
                     
                     echo "{$book_title} by ";

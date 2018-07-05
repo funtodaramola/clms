@@ -51,11 +51,11 @@
             <?php
             while($student_data = mysqli_fetch_assoc($student_set)){
                 // this displayes students from db
-                $student_data['fname'];
-                $student_data['lname'];
-                $student_data['dept'];
-                $student_data['college'];
-                $student_data['level'];
+                // $student_data['fname'];
+                // $student_data['lname'];
+                // $student_data['dept'];
+                // $student_data['college'];
+                // $student_data['level'];
                 $library_no = $student_data['dept'] . "/" . $student_data['student_id'];
                 $student_name = ucfirst(strtolower($student_data['fname'])) . " " . ucfirst(strtolower($student_data['lname']));
                 // switches back to easy to understand department names
@@ -109,7 +109,7 @@
                         $student_dept = "Invalid Department";
                 }
             ?>
-            <div class="student-data">
+            <div class="data">
                 <?php echo "{$student_name}"?>
                 <p><?php echo "Department: {$student_dept}"?></p>
                 <p><?php echo "Library Number: {$library_no} "?></p>
