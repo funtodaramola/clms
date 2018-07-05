@@ -23,8 +23,15 @@
         $response = null;
     }
 ?>
-// selects all books from DB
-<?php $book_set = find_all_from('books', 'book_id'); ?>
+<!-- selects all books from DB -->
+<?php
+    $select_query  = "SELECT * FROM books ";
+    $select_query  .= "WHERE available = 1 ";
+    $select_query  .= "ORDER BY book_id DESC";
+    $book_set = mysqli_query($connection, $select_query);
+    // Test if there was a query error
+    confirm_query($book_set);
+?>
 
 <!-- add php to validate login else redirect -->
 
