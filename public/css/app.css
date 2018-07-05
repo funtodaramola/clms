@@ -313,9 +313,10 @@ a{
 
 /* styles for manage.php page */
 .manageBtn {
-    font-size: 1.5em;
+    font-size: 1.75em;
     padding: 1em;
     font-family: sans;
+
 }
 .top{
     border-bottom: 3px solid #1abc9c;
@@ -332,4 +333,11 @@ a{
 .manage-action li {
     list-style-type: none;
     font-size: .75em;
+}
+.form-content hr{
+    margin-top: -1em;
+}
+
+#add-admin{
+    display: none;
 }
