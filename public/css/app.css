@@ -309,3 +309,7 @@ hr {
     font-size: 1.2em;
     font-family: sans;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
