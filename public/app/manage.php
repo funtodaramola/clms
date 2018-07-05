@@ -1,7 +1,7 @@
 <?php include ('../../includes/layouts/header.php')?>
 
 <section class="manage-section">
-    <button onclick="document.getElementById('add-admin').style.display='block'" class="foot_btn">Add Admin</button>
+    <button onclick="document.getElementById('add-admin').style.display='block'" class="manageBtn">Add Admin</button>
 
     <!-- The Modal (contains the Add admin form) -->
     <div id="add-admin" class="modal-form">

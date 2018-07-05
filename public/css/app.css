@@ -287,7 +287,7 @@ hr {
 /* style for buttons in footer */
 
 .foot_btn,
-.changeBtn {
+.changeBtn, .manageBtn {
     background-color: transparent;
     color: #e5e5e5;
     border: none;
@@ -312,4 +312,10 @@ hr {
 a{
     text-decoration: none;
     color: inherit;
+}
+
+.manageBtn {
+    font-size: 1.5em;
+    padding: 1em;
+    font-family: sans;
 }
