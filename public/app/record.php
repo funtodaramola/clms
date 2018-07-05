@@ -5,7 +5,9 @@
 <?php include ('../../includes/layouts/header.php')?>
 
     <section class="record-section">
+        
         <?php
+        // TODO order by date issued
             //Perform database query
             $select_query  = "SELECT * FROM issued ";
             $select_query  .= "ORDER BY book_id DESC";

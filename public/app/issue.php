@@ -48,11 +48,12 @@
                     // test for error
                 if ($issue_set) {
                     // success
-                    // $update_query = "UPDATE books SET ";
-                    // $update_query .= "available = 0 ";
-                    // $update_query .= "WHERE book_id =  {$book_id}";
-                    // $update_set = mysqli_query($connection, $update_query);
-                    // confirm_query($update_set);
+                    $update_query = "UPDATE books SET ";
+                    $update_query .= "available = 0 ";
+                    $update_query .= "WHERE book_id =  {$book_id}";
+                    $update_set = mysqli_query($connection, $update_query);
+                    confirm_query($update_set);
+                    redirect_to("record.php");
                 } else {
                     die("Books update failed. " . mysqli_error($connection));
                 }
