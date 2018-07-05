@@ -290,7 +290,8 @@ hr {
 
 /* style for buttons in footer */
 
-.foot_btn {
+.foot_btn,
+.changeBtn {
     background-color: transparent;
     color: #e5e5e5;
     border: none;
@@ -303,4 +304,14 @@ hr {
 }
 .account-head h1{
     padding: 0.5em;
+}
+#change{
+    display: none;
+}
+/* style for buttons in account settings */
+.changeBtn {
+    font-size: 1.75em;
+    font-weight: bold;
+    padding: 0.5em;
+    font-family: sans;
 }

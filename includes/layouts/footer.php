@@ -42,8 +42,8 @@
             <div class="account-head"><h1>Account Settings</h1></div>
             
                 <div class="form-content">
-                    <form action="#" method="post">
-                    <h2>Change Username and Password</h2>
+                    <button onclick="document.getElementById('change').style.display='block'" class="changeBtn">Change Username and Password</button>
+                    <form action="#" method="post" id="change">
                     <hr>			
                     <label for="username"><b>Username</b></label>
                     <input type="text" placeholder="New Username..." name="username" class="input-field" required>
@@ -52,7 +52,7 @@
                     <input type="password" placeholder="New Password..." name="password" class="input-field" required>
 
                     <div class="btns">
-                        <button type="button" onclick="document.getElementById('account').style.display='none'" class="cancelbtn">Cancel</button>
+                        <button type="button" onclick="document.getElementById('change').style.display='none'" class="cancelbtn">Cancel</button>
                         <button type="submit" class="submit">Update</button>
                     </div>
                     </form>
