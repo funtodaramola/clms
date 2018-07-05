@@ -1,11 +1,9 @@
 <?php
-    function redirect_to($new_location){
+
+  function redirect_to($new_location){
         header("Location: ". $new_location);
         exit;
     }
-?>
-
-<?php
 
 // function to test for database database failure
   function confirm_query($result_set){
@@ -44,5 +42,18 @@
     $update_set = mysqli_query($connection, $update_query);
     
     return $update_set;
+  }
+
+  function search_div($action, $title) {
+    $output = "<div class=\"search-container\">";
+      $output .= "<form action=\"{$action}\">";
+        $output .= "<p>{$title}</p>";
+        $output .="<input type=\"text\" class=\"search-box\" placeholder=\"Search...\" name=\"search\">";
+        $output .= "<button type=\"submit\"><img src=\"../img/search.png\" alt=\"search\"></button>";
+      $output .= "</form>";
+    $output .= "</div>";
+  $output .= "</div>";
+
+  return $output;
   }
 ?>

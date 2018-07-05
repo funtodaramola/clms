@@ -93,11 +93,6 @@ footer {
 .logout {
     display: inline;
     float: right;
-
-}
-.new {
-    font-size: 1em;
-    margin: auto;
 }
 
 /* styling for books page below */
@@ -121,31 +116,31 @@ footer {
     float: right;
 	
 }
-.top-nav{
+.top-menu{
     border-bottom: 3px solid #1abc9c;
 }
-.top-nav input[type=text] {
+.top-menu input[type=text] {
     padding: 12px;
     margin: 13px 0 1em 0;
     font-size: 1em;
     border: none;
     outline: none;
 }
-.top-nav .search-container button {
+.top-menu .search-container button {
     float: right;
     margin: 1em 2em 0 0;
     background: #ddd;
     border: none;
     cursor: pointer;
 }
-.top-nav .search-container button img{
+.top-menu .search-container button img{
     width: 3em;
     height: auto;
 }
 
 /* style for add new book modal */
 label{
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 /* Full-width Add new input fields*/
 .input-field, select,  input[type=date]{
@@ -229,7 +224,7 @@ label{
     border-radius: 6px;
 }
 hr {
-    border: 1px solid #f1f1f1;
+    border: 1px solid #e5e5e5;
     margin-bottom: 25px;
 }
 
@@ -240,7 +235,7 @@ hr {
     top: 15px;
     font-size: 40px;
     font-weight: bold;
-    color: #f1f1f1;
+    color: #e5e5e5;
 }
 
 .close-modal:hover, .close-modal:focus {
@@ -290,7 +285,8 @@ hr {
 
 /* style for buttons in footer */
 
-.foot_btn {
+.foot_btn,
+.changeBtn, .manageBtn {
     background-color: transparent;
     color: #e5e5e5;
     border: none;
@@ -300,7 +296,48 @@ hr {
 }
 .account-head{
     border-bottom: 3px solid #e5e5e5;
+    padding: 1em;
 }
-.account-head h1{
-    padding: 0.5em;
+#change{
+    display: none;
+}
+/* style for buttons in account settings */
+.changeBtn {
+    font-size: 1.2em;
+    font-family: sans;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* styles for manage.php page */
+.manageBtn {
+    font-size: 1.75em;
+    padding: 1em;
+    font-family: sans;
+
+}
+.top{
+    border-bottom: 3px solid #1abc9c;
+    padding: 1em;
+}
+.top h1,
+.manage-action li {
+    font-family: sans-serif;
+}
+
+.manage-action{
+    float: left;
+}
+.manage-action li {
+    list-style-type: none;
+    font-size: .75em;
+}
+.form-content hr{
+    margin-top: -1em;
+}
+
+#add-admin{
+    display: none;
 }

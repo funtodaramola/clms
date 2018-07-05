@@ -13,16 +13,12 @@
 <?php include ('../../includes/layouts/header.php')?>
         <section class="students-section">
 
-        <div class="top-nav">
+        <div class="top-menu">
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
-            <div class="search-container">
-                <form action="#">
-                    <p>STUDENTS</p>
-                    <input type="text" class="search-box" placeholder="Search..." name="search">
-                    <button type="submit"><img src="../img/search.png" alt="search"></button>
-                </form>
-            </div>
-        </div>
+        <?php
+            $div = search_div('#', 'STUDENTS');
+            echo $div;
+        ?>
 
         <!-- The Modal (contains add new student form) -->
         <div id="modal-form" class="modal-form">
