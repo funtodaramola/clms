@@ -2,7 +2,12 @@
 
 <section class="manage-section">
     <div class="top"><h1>MANAGE ADMINS</h1></div>
-    <button onclick="document.getElementById('add-admin').style.display='block'" class="manageBtn">Add Admin</button>
+    <div class="manage-action">
+        <button onclick="document.getElementById('add-admin').style.display='block'" class="manageBtn"><li>ADD ADMIN</li></button>
+        <button onclick="document.getElementById('add-admin').style.display='block'" class="manageBtn"><li>REMOVE ADMIN</li></button>
+    </div>
+    <div class="clear-fix"></div>
+
 
     <!-- The Modal (contains the Add admin form) -->
     <div id="add-admin" class="modal-form">

@@ -93,7 +93,6 @@ footer {
 .logout {
     display: inline;
     float: right;
-
 }
 
 /* styling for books page below */
@@ -312,6 +311,7 @@ a{
     color: inherit;
 }
 
+/* styles for manage.php page */
 .manageBtn {
     font-size: 1.5em;
     padding: 1em;
@@ -321,6 +321,15 @@ a{
     border-bottom: 3px solid #1abc9c;
     padding: 1em;
 }
-.top h1{
+.top h1,
+.manage-action li {
     font-family: sans-serif;
+}
+
+.manage-action{
+    float: left;
+}
+.manage-action li {
+    list-style-type: none;
+    font-size: .75em;
 }
