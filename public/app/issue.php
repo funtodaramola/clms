@@ -13,12 +13,12 @@
         $response = "Successfully issued book";
 
         // adding issued books to db
-        $update_query = "INSERT INTO issued (";
-        $update_query .= " book_id, student_id, datedue";
-        $update_query .= ") VALUES (";
-        $update_query .= " {$book_id}, {$student_id}, DATE '{$datedue}'";
-        $update_query .= ")";
-        $updated = mysqli_query($connection, $update_query);
+        $insert_query = "INSERT INTO issued (";
+        $insert_query .= " book_id, student_id, datedue";
+        $insert_query .= ") VALUES (";
+        $insert_query .= " {$book_id}, {$student_id}, DATE '{$datedue}'";
+        $insert_query .= ")";
+        $issue_set = mysqli_query($connection, $insert_query);
     } else {
         $response = null;
     }
@@ -46,9 +46,13 @@
             // update books table
                 if (isset($_POST["issue"])) {
                     // test for error
-                if ($updated) {
+                if ($issue_set) {
                     // success
-                    echo "{$response}";
+                    // $update_query = "UPDATE books SET ";
+                    // $update_query .= "available = 0 ";
+                    // $update_query .= "WHERE book_id =  {$book_id}";
+                    // $update_set = mysqli_query($connection, $update_query);
+                    // confirm_query($update_set);
                 } else {
                     die("Books update failed. " . mysqli_error($connection));
                 }
