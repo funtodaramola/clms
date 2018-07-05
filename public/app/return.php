@@ -2,7 +2,7 @@
         <section class="issue-section">
             <form action="issue.php" method="post">
                 <div class="form-issue">
-                    <h1>IReturn Book</h1>
+                    <h1>Return Book</h1>
                     <hr>
                     <label for="bookNo"><b>Book Number</b></label>
                     <input type="text" placeholder="Book Number..." name="bookNo" class="input-field" required>
