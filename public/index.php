@@ -1,9 +1,28 @@
 <?php 
+    require ('../includes/db.php');
     require_once ("../includes/functions.php");
     if (isset($_POST["login"])) {
-        redirect_to("app/index.php");
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        $login_query = "SELECT 'Username', 'password' ";
+        $login_query .= "FROM admin ";
+        $login_query .= "WHERE 'Username' = '$user' ";
+        $login_query .= "AND 'password' = '$pass'";
+        $login_set = mysqli_query($connection, $login_query);
+        if ($login_set) {
+            if (mysqli_num_rows($login_set) == NULL) {
+                echo 'INVALID login details.';
+            } else {
+                while ($login_row = mysqli_fetch_assoc($login_set)) {
+                    $user = $login_row['Username'];
+                    echo 'Welcome, Super Admin'. $user .'<br>';
+                    redirect_to("app/index.php");
+                }
+            }
+        } else {
+            echo mysqli_error();
+        }
     }
-    require ('../includes/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +44,7 @@
         <form action="index.php" method="post">
             <input id=username type="text" name="username" placeholder="Username" required>
             <input id=password type="password" name="password" placeholder="Password" required>
-            <input type="submit" name="login" value="Login">
+            <input type="submit" name="login" value="login">
         </form>  
     </div>
     
