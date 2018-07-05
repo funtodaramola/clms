@@ -4,10 +4,10 @@
     if (isset($_POST["login"])) {
         $user = $_POST['username'];
         $pass = $_POST['password'];
-        $login_query = "SELECT 'Username', 'password' ";
+        $login_query = "SELECT Username, password ";
         $login_query .= "FROM admin ";
-        $login_query .= "WHERE 'Username' = '$user' ";
-        $login_query .= "AND 'password' = '$pass'";
+        $login_query .= "WHERE Username = '$user' ";
+        $login_query .= "AND password = '$pass'";
         $login_set = mysqli_query($connection, $login_query);
         if ($login_set) {
             if (mysqli_num_rows($login_set) == NULL) {
