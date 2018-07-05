@@ -39,7 +39,7 @@
 
             <div class="action">
                 <div class="content">
-                    <a href="#">
+                    <a href="return.php">
                         <button class="btn" id="return"><img src="../img/return.png" alt="Book Return"></button>
                     </a>
                     <h2>Book Return</h2>
