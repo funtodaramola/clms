@@ -145,7 +145,7 @@ footer {
 
 /* style for add new book modal */
 label{
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 /* Full-width Add new input fields*/
 .input-field, select,  input[type=date]{
@@ -310,8 +310,6 @@ hr {
 }
 /* style for buttons in account settings */
 .changeBtn {
-    font-size: 1.75em;
-    font-weight: bold;
-    padding: 0.5em;
+    font-size: 1.2em;
     font-family: sans;
 }

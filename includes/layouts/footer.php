@@ -42,7 +42,7 @@
             <div class="account-head"><h1>Account Settings</h1></div>
             
                 <div class="form-content">
-                    <button onclick="document.getElementById('change').style.display='block'" class="changeBtn">Change Username and Password</button>
+                    <button onclick="document.getElementById('change').style.display='block'" class="changeBtn"><h2>Change Username and Password</h2></button>
                     <form action="#" method="post" id="change">
                     <hr>			
                     <label for="username"><b>Username</b></label>
