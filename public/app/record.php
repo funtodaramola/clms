@@ -5,8 +5,14 @@
 <?php include ('../../includes/layouts/header.php')?>
 
     <section class="record-section">
-        
+        <div class="top-menu">
+            <button class="new-icon"><a href="issue.php"><img src="../img/new.png" alt="issue-book"></a></button>
         <?php
+            $div = search_div('#', 'RECORDS');
+            echo $div;
+        ?>
+        <div class="main">
+            <?php
         // TODO order by date issued
             //Perform database query
             $select_query  = "SELECT * FROM issued ";
@@ -64,6 +70,7 @@
         <?php
         }
         ?>
+        </div>
         <?php
             //Release returned data
             mysqli_free_result($issued_set);
