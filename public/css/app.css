@@ -288,12 +288,19 @@ hr {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* style for add admin button in footer */
+/* style for buttons in footer */
 
-.add-admin, .account {
+.foot_btn {
     background-color: transparent;
     color: #e5e5e5;
     border: none;
     cursor: pointer;
     margin: 0 0 0 4px;
+    outline: none;
+}
+.account-head{
+    border-bottom: 3px solid #e5e5e5;
+}
+.account-head h1{
+    padding: 0.5em;
 }
