@@ -297,9 +297,7 @@ hr {
 }
 .account-head{
     border-bottom: 3px solid #e5e5e5;
-}
-.account-head h1{
-    padding: 0.5em;
+    padding: 1em;
 }
 #change{
     display: none;
@@ -318,4 +316,11 @@ a{
     font-size: 1.5em;
     padding: 1em;
     font-family: sans;
+}
+.top{
+    border-bottom: 3px solid #1abc9c;
+    padding: 1em;
+}
+.top h1{
+    font-family: sans-serif;
 }
