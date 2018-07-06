@@ -45,7 +45,6 @@
                     // test for error
                 if ($issue_set) {
                     // success
-                    // check if book_id is in books
                     $update_query = "UPDATE books SET ";
                     $update_query .= "available = 0 ";
                     $update_query .= "WHERE book_id =  {$book_id}";
@@ -54,6 +53,10 @@
                     if (mysqli_affected_rows($connection) == 1) {
                         redirect_to("record.php");
                     } else {
+                        $delete_query = "DELETE FROM issued ";
+                        $delete_query .= "WHERE book_id = {$book_id} ";
+                        $delete_query .= "LIMIT 1";
+                        $delete_set = mysqli_query($connection, $delete_query);
                         die("Book not Issued. " . mysqli_error($connection));
                     }
                 } else {
