@@ -1,4 +1,7 @@
-<?php include ('../../includes/layouts/header.php')?>
+<?php 
+    require_once ("../../includes/functions.php");
+    include ('../../includes/layouts/header.php');
+?>
 
         <section class = "dashboard">
             <div class="action">

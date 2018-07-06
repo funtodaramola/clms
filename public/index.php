@@ -1,6 +1,7 @@
 <?php 
     require ('../includes/db.php');
     require_once ("../includes/functions.php");
+    session_start();
     if (isset($_POST["login"])) {
         $user = $_POST['username'];
         $pass = $_POST['password'];
@@ -13,6 +14,9 @@
             if (mysqli_num_rows($login_set) == NULL) {
                 echo 'INVALID login details.';
             } else {
+                $_SESSION['username'] = $user;
+
+
                 redirect_to("app/index.php");
             }
         } else {
