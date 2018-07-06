@@ -53,7 +53,11 @@
                     $update_query .= "WHERE book_id =  {$book_id}";
                     $update_set = mysqli_query($connection, $update_query);
                     confirm_query($update_set);
-                    redirect_to("record.php");
+                    if (mysqli_affected_rows($connection) == 1) {
+                        redirect_to("record.php");
+                    } else {
+                        echo "Book not issued";
+                    }
                 } else {
                     die("Books update failed. " . mysqli_error($connection));
                 }
