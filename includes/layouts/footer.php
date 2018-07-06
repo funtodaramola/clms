@@ -5,7 +5,7 @@
             <!-- Buttons to open the modal -->
             <button id="myBtn" onclick="document.getElementById('account').style.display='block'" class="foot_btn">Account Settings</button>
             <button class="foot_btn"><a href="../../public/app/manage.php">Manage Admin</a></button>
-            <button class="foot_btn"><a href="../../public/index.php">Logout</a></button>
+            <button class="foot_btn"><a href="../../includes/logout.php">Logout</a></button>
         </span>
     </div>
 
