@@ -1,3 +1,21 @@
+<?php require ('../../includes/db.php')?>
+<?php
+    //check if form is submitted
+    if (isset($_POST['return'])) {
+        // change the inputs into the book_id and student_id in db
+        $book_no = $_POST['bookNo'];
+        $book_id = substr($book_no, 3);
+        $library_no = $_POST['libraryNo'];
+        $student_id = substr($library_no, 4);
+        // $datedue = $_POST['datedue'];
+
+        // adding issued books to db
+        $delete_query = "DELETE FROM issued ";
+        $delete_query .= "WHERE book_id = {$book_id} ";
+        $delete_query .= "LIMIT 1";
+        $delete_set = mysqli_query($connection, $delete_query);
+    }
+?>
 <?php include ('../../includes/layouts/header.php')?>
         <section class="return-section">
             <form action="return.php" method="post">
@@ -13,7 +31,7 @@
 <!--                     <label for="datedue"><b>Date Issued</b></label>
                     <input type="date" name="datedue" min="2018-01-01"> -->
 
-                    <button type="submit" class="submit" name= "Return" value="Return"><span id="returnBtn">Return</span></button>
+                    <button type="submit" class="submit" name= "return" value="return"><span id="returnBtn">Return</span></button>
                 </div>
             </form>
             

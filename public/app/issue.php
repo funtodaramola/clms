@@ -10,7 +10,6 @@
         $library_no = $_POST['libraryNo'];
         $student_id = substr($library_no, 4);
         $datedue = $_POST['datedue'];
-        $response = "Successfully issued book";
 
         // adding issued books to db
         $insert_query = "INSERT INTO issued (";
@@ -19,8 +18,6 @@
         $insert_query .= " {$book_id}, {$student_id}, DATE '{$datedue}'";
         $insert_query .= ")";
         $issue_set = mysqli_query($connection, $insert_query);
-    } else {
-        $response = null;
     }
 ?>
 
