@@ -1,4 +1,5 @@
 <?php require ('../../includes/db.php')?>
+<?php require_once ("../../includes/functions.php")?>
 <?php
     //check if form is submitted
     if (isset($_POST['return'])) {
@@ -34,6 +35,26 @@
                     <button type="submit" class="submit" name= "return" value="return"><span id="returnBtn">Return</span></button>
                 </div>
             </form>
-            
+            <?php 
+            // update books table
+                if (isset($_POST["return"])) {
+                    // test for error
+                if ($delete_set) {
+                    // success
+                    $update_query = "UPDATE books SET ";
+                    $update_query .= "available = 1 ";
+                    $update_query .= "WHERE book_id =  {$book_id}";
+                    $update_set = mysqli_query($connection, $update_query);
+                    confirm_query($update_set);
+                    if (mysqli_affected_rows($connection) == 1) {
+                        redirect_to("books.php");
+                    } else {
+                        die("Book not Returned. " . mysqli_error($connection));
+                    }
+                } else {
+                    die("Books update failed. " . mysqli_error($connection));
+                }
+                }
+            ?>
         </section>
 <?php include ('../../includes/layouts/footer.php'); ?>
