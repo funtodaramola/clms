@@ -48,6 +48,7 @@
                     // test for error
                 if ($issue_set) {
                     // success
+                    // check if book_id is in books
                     $update_query = "UPDATE books SET ";
                     $update_query .= "available = 0 ";
                     $update_query .= "WHERE book_id =  {$book_id}";
@@ -56,7 +57,7 @@
                     if (mysqli_affected_rows($connection) == 1) {
                         redirect_to("record.php");
                     } else {
-                        echo "Book not issued";
+                        die("Book not Issued. " . mysqli_error($connection));
                     }
                 } else {
                     die("Books update failed. " . mysqli_error($connection));
