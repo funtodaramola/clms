@@ -8,8 +8,23 @@
         <div class="top-menu">
             <button class="new-icon"><a href="issue.php"><img src="../img/new.png" alt="issue-book"></a></button>
         <?php
-            $div = search_div('record.php', 'RECORDS', 'record', 'Book Number...');
+            $div = search_div('record.php', 'RECORDS', 'book', 'Book Number...');
             echo $div;
+            if (isset($_GET['book'])) {
+                    // add condition to test that book number is greater than 3
+                    if (is_numeric($_GET['book'])) {
+                        $book = substr($_GET['book'], 3);
+
+                        $select_query  = "SELECT * FROM books ";
+                        $select_query  .= "WHERE available = 0 ";
+                        $select_query  .= "AND book_id = {$book} ";
+                        $book_set = mysqli_query($connection, $select_query);
+                        // Test if there was a query error
+                        confirm_query($book_set);
+                    } else {
+                        die("Enter Book Number");
+                    }
+                }
         ?>
         <div class="main">
             <?php
@@ -28,21 +43,21 @@
             $datedue = $issued['datedue'];
         ?>
         <?php
-            $select_query  = "SELECT * FROM books ";
+            if (!isset($_GET['book'])) {
+                $select_query  = "SELECT * FROM books ";
             $select_query  .= "WHERE available = 0 ";
             $select_query  .= "AND book_id = {$book_id}";
             $book_set = mysqli_query($connection, $select_query);
             // Test if there was a query error
             confirm_query($book_set);
-        ?>
-        <?php 
+            }
+
             $select_query  = "SELECT * FROM students ";
             $select_query  .= "WHERE student_id = {$student_id}";
             $student_set = mysqli_query($connection, $select_query);
             // Test if there was a query error
-            confirm_query($student_set); 
-        ?>
-        <?php
+            confirm_query($student_set);
+
         while($book_data = mysqli_fetch_assoc($book_set) and $student_data = mysqli_fetch_assoc($student_set)){
             $book_no = $book_data['category'] . $book_data['book_id'];
             $book_title = strtoupper($book_data['title']);
