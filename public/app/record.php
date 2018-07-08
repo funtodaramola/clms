@@ -8,7 +8,7 @@
         <div class="top-menu">
             <button class="new-icon"><a href="issue.php"><img src="../img/new.png" alt="issue-book"></a></button>
         <?php
-            $div = search_div('#', 'RECORDS');
+            $div = search_div('record.php', 'RECORDS', 'record', 'Book Number...');
             echo $div;
         ?>
         <div class="main">

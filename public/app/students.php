@@ -16,7 +16,7 @@
         <div class="top-menu">
             <button onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
         <?php
-            $div = search_div('#', 'STUDENTS');
+            $div = search_div('students.php', 'STUDENTS', 'student', 'Library Number...');
             echo $div;
         ?>
 
