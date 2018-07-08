@@ -41,8 +41,19 @@
         <div class="top-menu">
             <button  onclick="document.getElementById('modal-form').style.display='block'" class="new-icon"><img src="../img/new.png" alt="new"></button>
             <?php
-                $div = search_div('#', 'BOOKS');
+                $div = search_div('books.php', 'BOOKS', 'book', 'Book Number...');
                 echo $div;
+                if (isset($_GET['book'])) {
+                    // add condition to test that book number is greater than 3
+                    $book = substr($_GET['book'], 3);
+
+                    $select_query  = "SELECT * FROM books ";
+                    $select_query  .= "WHERE available = 1 ";
+                    $select_query  .= "AND book_id = {$book} ";
+                    $book_set = mysqli_query($connection, $select_query);
+                    // Test if there was a query error
+                    confirm_query($book_set);
+                }
             ?>
 
         <!-- The Modal (contains add new book form) -->

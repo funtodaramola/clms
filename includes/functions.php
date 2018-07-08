@@ -44,11 +44,11 @@
     return $update_set;
   }
 
-  function search_div($action, $title) {
+  function search_div($action, $title, $query, $placeholder) {
     $output = "<div class=\"search-container\">";
-      $output .= "<form action=\"{$action}\">";
+      $output .= "<form action=\"{$action}\" method=\"get\">";
         $output .= "<p>{$title}</p>";
-        $output .="<input type=\"text\" class=\"search-box\" placeholder=\"Search...\" name=\"search\">";
+        $output .="<input type=\"text\" class=\"search-box\" placeholder='{$placeholder}' name={$query}>";
         $output .= "<button type=\"submit\"><img src=\"../img/search.png\" alt=\"search\"></button>";
       $output .= "</form>";
     $output .= "</div>";
