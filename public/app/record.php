@@ -22,7 +22,8 @@
                         // Test if there was a query error
                         confirm_query($book_set);
                     } else {
-                        die("Enter Book Number");
+                        redirect_to("record.php");
+                        die();
                     }
                 }
         ?>
@@ -45,11 +46,11 @@
         <?php
             if (!isset($_GET['book'])) {
                 $select_query  = "SELECT * FROM books ";
-            $select_query  .= "WHERE available = 0 ";
-            $select_query  .= "AND book_id = {$book_id}";
-            $book_set = mysqli_query($connection, $select_query);
-            // Test if there was a query error
-            confirm_query($book_set);
+                $select_query  .= "WHERE available = 0 ";
+                $select_query  .= "AND book_id = {$book_id}";
+                $book_set = mysqli_query($connection, $select_query);
+                // Test if there was a query error
+                confirm_query($book_set);
             }
 
             $select_query  = "SELECT * FROM students ";
