@@ -11,24 +11,8 @@
             $div = search_div('record.php', 'RECORDS', 'book', 'Book Number...');
             echo $div;
             if (isset($_GET['book'])) {
-                    // add condition to test that book number is greater than 3
-                    if (is_numeric($_GET['book'])) {
-                        $book = substr($_GET['book'], 3);
-
-                        $select_query  = "SELECT * FROM books ";
-                        $select_query  .= "WHERE available = 0 ";
-                        $select_query  .= "AND book_id = {$book} ";
-                        $book_set = mysqli_query($connection, $select_query);
-                        // Test if there was a query error
-                        confirm_query($book_set);
-                    } else {
-                        if ($_GET['book'] == "") {
-                            echo "Search Bar should not be empty...";
-                        } else {
-                            echo "Only Numbers should be inputted...";
-                        }
-                    }
-                }
+                $book_set = search_books(0, $_GET['book']);
+            }
         ?>
         <div class="main">
             <?php
@@ -47,7 +31,7 @@
             $datedue = $issued['datedue'];
         ?>
         <?php
-            if (!isset($_GET['book']) or $_GET['book'] == "" or is_string($_GET['book'])) {
+            if (!isset($_GET['book']) or $_GET['book'] == "") {
                 $select_query  = "SELECT * FROM books ";
                 $select_query  .= "WHERE available = 0 ";
                 $select_query  .= "AND book_id = {$book_id}";

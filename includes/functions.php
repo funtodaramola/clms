@@ -56,4 +56,30 @@
 
   return $output;
   }
+
+  function find_book() {
+    
+  }
+
+  function search_books($available, $data) {
+      global $connection;
+      // add condition to test that book number is greater than 3
+      if (is_numeric($data)) {
+          $book = substr($data, 3);
+          $select_query  = "SELECT * FROM books ";
+          $select_query  .= "WHERE available = {$available} ";
+          $select_query  .= "AND book_id = {$book}";
+          $result_set = mysqli_query($connection, $select_query);
+          // Test if there was a query error
+          confirm_query($result_set);
+          return $result_set;
+      } else {
+          if ($data == "") {
+              echo "Search Bar should not be empty...";
+          } else {
+              echo "Only Numbers should be inputted...";
+          }
+          return NULL;
+      }
+  }
 ?>
