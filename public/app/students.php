@@ -18,6 +18,20 @@
         <?php
             $div = search_div('students.php', 'STUDENTS', 'student', 'Library Number...');
             echo $div;
+            if (isset($_GET['student'])) {
+                if ($_GET['student'] == "") {
+                    echo "Enter a Library Number...";
+                } else {
+                    // add condition to test that book number is greater than 3
+                $student = substr($_GET['student'], 4);
+
+                $select_query  = "SELECT * FROM students ";
+                $select_query  .= "WHERE student_id = {$student} ";
+                $student_set = mysqli_query($connection, $select_query);
+                // Test if there was a query error
+                confirm_query($student_set);
+                }
+            }
         ?>
 
         <!-- The Modal (contains add new student form) -->

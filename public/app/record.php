@@ -22,8 +22,11 @@
                         // Test if there was a query error
                         confirm_query($book_set);
                     } else {
-                        redirect_to("record.php");
-                        die();
+                        if ($_GET['book'] == "") {
+                            echo "Search Bar should not be empty...";
+                        } else {
+                            echo "Only Numbers should be inputted...";
+                        }
                     }
                 }
         ?>
@@ -44,7 +47,7 @@
             $datedue = $issued['datedue'];
         ?>
         <?php
-            if (!isset($_GET['book'])) {
+            if (!isset($_GET['book']) or $_GET['book'] == "" or is_string($_GET['book'])) {
                 $select_query  = "SELECT * FROM books ";
                 $select_query  .= "WHERE available = 0 ";
                 $select_query  .= "AND book_id = {$book_id}";
